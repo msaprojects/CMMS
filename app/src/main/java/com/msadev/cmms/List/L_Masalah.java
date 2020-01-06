@@ -1,13 +1,11 @@
 package com.msadev.cmms.List;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -23,7 +21,9 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.msadev.cmms.Adapter.MasalahAdapter;
 import com.msadev.cmms.Adapter.MesinAdapter;
+import com.msadev.cmms.Model.MasalahModel;
 import com.msadev.cmms.Model.MesinModel;
 import com.msadev.cmms.R;
 import com.msadev.cmms.Tambah.i_Permasalahan;
@@ -36,35 +36,40 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static com.msadev.cmms.Util.JsonResponse.DATAMESIN;
+import static com.msadev.cmms.Util.JsonResponse.JRES_ENGGINER;
+import static com.msadev.cmms.Util.JsonResponse.JRES_IDMASALAH;
 import static com.msadev.cmms.Util.JsonResponse.JRES_IDMESIN;
+import static com.msadev.cmms.Util.JsonResponse.JRES_IDPENGGUNA;
+import static com.msadev.cmms.Util.JsonResponse.JRES_JAM;
 import static com.msadev.cmms.Util.JsonResponse.JRES_KETERANGAN;
 import static com.msadev.cmms.Util.JsonResponse.JRES_NOMESIN;
+import static com.msadev.cmms.Util.JsonResponse.JRES_SHIFT;
 import static com.msadev.cmms.Util.JsonResponse.JRES_SITE;
+import static com.msadev.cmms.Util.JsonResponse.JRES_TANGGAL;
 import static com.msadev.cmms.Util.JsonResponse.TAG_RESULT;
 import static com.msadev.cmms.Util.Server.IPADDRESS;
 
-public class L_Mesin extends AppCompatActivity {
+public class L_Masalah extends AppCompatActivity implements View.OnClickListener {
 
     ListView listView;
-    List<MesinModel> mesinModelList;
-    FloatingActionButton fab;
+    List<MasalahModel> masalahModels;
     SwipeRefreshLayout refresh;
+    FloatingActionButton fab;
     SearchView searchView;
     MenuItem menuItem;
     Menu menu;
-    MesinAdapter adapter;
+    MasalahAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.listview);
-        this.setTitle("Pilih Mesin");
-
+        this.setTitle("Permasalahan");
 
         listView = (ListView) findViewById(R.id.listview);
         fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.hide();
-        mesinModelList = new ArrayList<>();
+        fab.setOnClickListener(this);
+        masalahModels = new ArrayList<>();
 
         refresh = (SwipeRefreshLayout) findViewById(R.id.refresh);
         refresh.setColorSchemeResources(R.color.colorAccent, R.color.colorPrimary, R.color.colorPrimaryDark);
@@ -75,7 +80,7 @@ public class L_Mesin extends AppCompatActivity {
                     @Override
                     public void run() {
                         refresh.setRefreshing(false);
-                        mesinModelList.clear();
+                        masalahModels.clear();
                         loadData();
                         Toast.makeText(getApplicationContext(), "Data Berhasil diperbarui!", Toast.LENGTH_LONG).show();
                     }
@@ -83,48 +88,22 @@ public class L_Mesin extends AppCompatActivity {
             }
         });
 
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-                MesinModel mesinModel = mesinModelList.get(position);
-                Intent i = new Intent(getApplicationContext(), i_Permasalahan.class );
-                i.putExtra(DATAMESIN, mesinModel);
-                startActivity(i);
-            }
-        });
+//        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+//                MasalahModel mm = masalahModels.get(position);
+//                Intent i = new Intent(getApplicationContext(), i_Permasalahan.class );
+//                i.putExtra(DATAMESIN, mm);
+//                startActivity(i);
+//            }
+//        });
 
         loadData();
 
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu){
-        getMenuInflater().inflate(R.menu.actionsearch, menu);
-        menuItem = menu.findItem(R.id.search);
-        searchView = (SearchView) menuItem.getActionView();
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String s) {
-                return false;
-            }
-
-            @Override
-            public boolean onQueryTextChange(String s) {
-
-                if (TextUtils.isEmpty(s)){
-                    adapter.filter("");
-                    listView.clearTextFilter();
-                }else {
-                    adapter.filter(s);
-                }
-                return true;
-            }
-        });
-        return true;
-    }
-
     private void loadData(){
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, IPADDRESS + "/mesin", new Response.Listener<String>() {
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, IPADDRESS + "/masalah", new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 try {
@@ -132,15 +111,21 @@ public class L_Mesin extends AppCompatActivity {
                     JSONArray array = obj.getJSONArray(TAG_RESULT);
                     for (int i = 0; i < array.length(); i++) {
                         JSONObject object = array.getJSONObject(i);
-                        MesinModel mesinModel = new MesinModel(
+                        MasalahModel masalahModel = new MasalahModel(
+                                object.getString(JRES_IDMASALAH),
+                                object.getString(JRES_KETERANGAN),
+                                object.getString(JRES_TANGGAL),
+                                object.getString(JRES_JAM),
+                                object.getString(JRES_ENGGINER),
+                                object.getString(JRES_SHIFT),
                                 object.getString(JRES_IDMESIN),
+                                object.getString(JRES_IDPENGGUNA),
                                 object.getString(JRES_NOMESIN),
-                                object.getString(JRES_SITE),
-                                object.getString(JRES_KETERANGAN)
+                                object.getString(JRES_SITE)
                         );
-                        mesinModelList.add(mesinModel);
+                        masalahModels.add(masalahModel);
                     }
-                    adapter = new MesinAdapter(mesinModelList, getApplicationContext());
+                    adapter = new MasalahAdapter(masalahModels, getApplicationContext());
                     listView.setAdapter(adapter);
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -158,5 +143,12 @@ public class L_Mesin extends AppCompatActivity {
         requestQueue.add(stringRequest);
     }
 
-
+    @Override
+    public void onClick(View view) {
+        if (view == fab){
+            Intent i = new Intent(getApplicationContext(), L_Mesin.class );
+//                i.putExtra(DATAMESIN, mm);
+                startActivity(i);
+        }
+    }
 }
