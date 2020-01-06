@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp"
+    tools:context=".List.L_Mesin">
+    <TextView
+        android:id="@+id/nomesin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/value"
+        android:textStyle="bold"
+        app:fontFamily="@font/roboto_mono_medium" />
+    <TextView
+        android:id="@+id/site"
+        android:text="@string/value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fontFamily="@font/roboto_mono" />
+    <TextView
+        android:id="@+id/keterangan"
+        android:text="@string/value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fontFamily="@font/roboto_mono" />
+</LinearLayout>
