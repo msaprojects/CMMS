@@ -10,4 +10,6 @@
     <string name="site">Site</string>
     <string name="tanggal">Tanggal</string>
     <string name="jam">Jam</string>
+    <string name="masalah">Masalah</string>
+    <string name="perbaikan">Perbaikan</string>
 </resources>

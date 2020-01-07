@@ -5,43 +5,37 @@ import android.os.Parcelable;
 
 public class MasalahModel implements Parcelable {
 
-    String idmasalah, keterangan, tanggal, jam, engginer, shift, idmesin,idpengguna, nomesin, site;
+    String idmasalah, jam, tanggal, masalah, idmesin, idpengguna, nomesin, site;
 
-    public MasalahModel(String idmasalah, String keterangan, String tanggal, String jam, String engginer, String shift, String idmesin, String idpengguna, String nomesin, String site) {
+    public MasalahModel(String idmasalah, String jam, String tanggal, String masalah, String idmesin, String idpengguna, String nomesin, String site) {
         this.idmasalah = idmasalah;
-        this.keterangan = keterangan;
-        this.tanggal = tanggal;
         this.jam = jam;
-        this.engginer = engginer;
-        this.shift = shift;
+        this.tanggal = tanggal;
+        this.masalah = masalah;
         this.idmesin = idmesin;
         this.idpengguna = idpengguna;
         this.nomesin = nomesin;
         this.site = site;
     }
 
+    public String getAll(){
+        return nomesin+site;
+    }
+
     public String getIdmasalah() {
         return idmasalah;
-    }
-
-    public String getKeterangan() {
-        return keterangan;
-    }
-
-    public String getTanggal() {
-        return tanggal;
     }
 
     public String getJam() {
         return jam;
     }
 
-    public String getEngginer() {
-        return engginer;
+    public String getTanggal() {
+        return tanggal;
     }
 
-    public String getShift() {
-        return shift;
+    public String getMasalah() {
+        return masalah;
     }
 
     public String getIdmesin() {
@@ -62,11 +56,9 @@ public class MasalahModel implements Parcelable {
 
     protected MasalahModel(Parcel in) {
         idmasalah = in.readString();
-        keterangan = in.readString();
-        tanggal = in.readString();
         jam = in.readString();
-        engginer = in.readString();
-        shift = in.readString();
+        tanggal = in.readString();
+        masalah = in.readString();
         idmesin = in.readString();
         idpengguna = in.readString();
         nomesin = in.readString();
@@ -76,11 +68,9 @@ public class MasalahModel implements Parcelable {
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(idmasalah);
-        dest.writeString(keterangan);
-        dest.writeString(tanggal);
         dest.writeString(jam);
-        dest.writeString(engginer);
-        dest.writeString(shift);
+        dest.writeString(tanggal);
+        dest.writeString(masalah);
         dest.writeString(idmesin);
         dest.writeString(idpengguna);
         dest.writeString(nomesin);

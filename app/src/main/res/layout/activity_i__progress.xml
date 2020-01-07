@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Tambah.i_Permasalahan">
+    tools:context=".Tambah.i_Progress">
     <LinearLayout
         android:id="@+id/l1"
         android:padding="20dp"
@@ -58,10 +58,36 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
             </TableRow>
+            <TableRow>
+                <TextView
+                    android:text="@string/masalah"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/roboto_mono_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:text="@string/titikdua"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/roboto_mono_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/tvMasalah"
+                    android:text="@string/value"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/roboto_mono_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </TableRow>
         </TableLayout>
         <EditText
-            android:id="@+id/etMasalah"
-            android:hint="@string/masalah"
+            android:id="@+id/etPerbaikan"
+            android:hint="@string/perbaikan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/etEngginer"
+            android:hint="@string/engginer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
         <LinearLayout
@@ -74,17 +100,12 @@
                 android:layout_width="205dp"
                 android:layout_height="wrap_content" />
             <EditText
-                android:id="@+id/etJam"
-                android:hint="@string/jam"
+                android:id="@+id/etShift"
+                android:hint="@string/shift"
+                android:inputType="number"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </LinearLayout>
-        <EditText
-            android:id="@+id/etShift"
-            android:hint="@string/shift"
-            android:inputType="number"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
         <Button
             android:layout_marginTop="25dp"
             android:id="@+id/btnSimpan"

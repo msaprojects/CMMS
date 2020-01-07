@@ -13,6 +13,7 @@ import com.msadev.cmms.R;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class MasalahAdapter extends ArrayAdapter<MasalahModel> {
 
@@ -44,9 +45,24 @@ public class MasalahAdapter extends ArrayAdapter<MasalahModel> {
         jam.setText(mm.getJam());
         nomesin.setText(mm.getNomesin());
         site.setText(mm.getSite());
-        keterangan.setText(mm.getKeterangan());
+        keterangan.setText(mm.getMasalah());
 
         return listData;
+    }
+
+    public void filter(String filters){
+        filters = filters.toLowerCase(Locale.getDefault());
+        masalahModelList.clear();
+        if (filters.length()==0){
+            masalahModelList.addAll(array);
+        }else {
+            for (MasalahModel mm : array){
+                if (mm.getAll().toLowerCase(Locale.getDefault()).contains(filters)){
+                    masalahModelList.add(mm);
+                }
+            }
+        }
+        notifyDataSetChanged();
     }
 
 }

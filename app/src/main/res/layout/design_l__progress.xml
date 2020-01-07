@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="5dp"
-    tools:context=".List.L_Masalah">
+    tools:context=".List.L_Progress">
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -69,6 +69,42 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="@string/engginer"
+                app:fontFamily="@font/roboto_mono_medium" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/titikdua"
+                app:fontFamily="@font/roboto_mono_medium" />
+            <TextView
+                android:id="@+id/engginer"
+                android:text="@string/value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fontFamily="@font/roboto_mono" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/shift"
+                app:fontFamily="@font/roboto_mono_medium" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/titikdua"
+                app:fontFamily="@font/roboto_mono_medium" />
+            <TextView
+                android:id="@+id/shift"
+                android:text="@string/value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fontFamily="@font/roboto_mono" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="@string/site"
                 app:fontFamily="@font/roboto_mono_medium" />
             <TextView
@@ -87,7 +123,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/masalah"
+                android:text="@string/perbaikan"
                 app:fontFamily="@font/roboto_mono_medium" />
             <TextView
                 android:layout_width="wrap_content"
@@ -95,7 +131,7 @@
                 android:text="@string/titikdua"
                 app:fontFamily="@font/roboto_mono_medium" />
             <TextView
-                android:id="@+id/keterangan"
+                android:id="@+id/perbaikan"
                 android:text="@string/value"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

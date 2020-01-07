@@ -11,7 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".List.L_Mesin"></activity>
+        <activity android:name=".List.L_Progress"></activity>
+        <activity android:name=".Tambah.i_Progress" />
+        <activity android:name=".List.L_Mesin" />
+        <activity android:name=".Trigger.convertPerbaikan" />
+        <activity android:name=".Trigger.MenuPerbaikan" />
         <activity android:name=".Tambah.i_Permasalahan" />
         <activity android:name=".MainActivity" />
         <activity android:name=".List.L_Masalah">
