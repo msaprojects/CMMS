@@ -1,5 +1,5 @@
 package com.msadev.cmms.Util;
 
 public class Server {
-    public static final String IPADDRESS="http://192.92.195.201:4005";
+    public static final String IPADDRESS="http://103.238.203.168:9998";
 }

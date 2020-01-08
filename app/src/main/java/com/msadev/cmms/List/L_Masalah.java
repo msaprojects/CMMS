@@ -147,6 +147,7 @@ public class L_Masalah extends AppCompatActivity implements View.OnClickListener
                                 object.getString(JRES_JAM),
                                 object.getString(JRES_TANGGAL),
                                 object.getString(JRES_MASALAH),
+                                object.getString(JRES_SHIFT),
                                 object.getString(JRES_IDMESIN),
                                 object.getString(JRES_IDPENGGUNA),
                                 object.getString(JRES_NOMESIN),

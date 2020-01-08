@@ -6,6 +6,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.msadev.cmms.Edit.e_Permasalahan;
 import com.msadev.cmms.List.L_Progress;
 import com.msadev.cmms.Model.MasalahModel;
 import com.msadev.cmms.Tambah.i_Progress;
@@ -38,7 +39,10 @@ public class convertPerbaikan extends AppCompatActivity {
             startActivity(intent);
             finish();
         }else if (item.equals("Edit Masalah")){
-            Toast.makeText(getApplicationContext(), item, Toast.LENGTH_SHORT).show();
+            intent = new Intent(getApplicationContext(), e_Permasalahan.class);
+            intent.putExtra(DATAMASALAH, mm);
+            startActivity(intent);
+            finish();
         }else {
             Toast.makeText(getApplicationContext(), "Menu yang anda pilih tidak sesuai...", Toast.LENGTH_SHORT).show();
         }
