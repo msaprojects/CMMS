@@ -45,7 +45,7 @@
                 android:text="@string/value"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:fontFamily="@font/roboto_mono" />
+                app:fontFamily="@font/roboto_mono_medium" />
         </TableRow>
         <TableRow>
             <TextView
@@ -63,7 +63,7 @@
                 android:text="@string/value"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:fontFamily="@font/roboto_mono" />
+                app:fontFamily="@font/roboto_mono_medium" />
         </TableRow>
         <TableRow>
             <TextView
@@ -81,13 +81,13 @@
                 android:text="@string/value"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:fontFamily="@font/roboto_mono" />
+                app:fontFamily="@font/roboto_mono_medium" />
         </TableRow>
         <TableRow>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/shift"
+                android:text="@string/masalah"
                 app:fontFamily="@font/roboto_mono_medium" />
             <TextView
                 android:layout_width="wrap_content"
@@ -95,11 +95,11 @@
                 android:text="@string/titikdua"
                 app:fontFamily="@font/roboto_mono_medium" />
             <TextView
-                android:id="@+id/shift"
+                android:id="@+id/tvMasalah"
                 android:text="@string/value"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:fontFamily="@font/roboto_mono" />
+                app:fontFamily="@font/roboto_mono_medium" />
         </TableRow>
         <TableRow>
             <TextView
@@ -117,7 +117,7 @@
                 android:text="@string/value"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:fontFamily="@font/roboto_mono" />
+                app:fontFamily="@font/roboto_mono_medium" />
         </TableRow>
         <TableRow>
             <TextView
@@ -135,7 +135,7 @@
                 android:text="@string/value"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:fontFamily="@font/roboto_mono" />
+                app:fontFamily="@font/roboto_mono_medium" />
         </TableRow>
     </TableLayout>
 </LinearLayout>

@@ -129,16 +129,20 @@ public class L_Mesin extends AppCompatActivity {
             public void onResponse(String response) {
                 try {
                     JSONObject obj = new JSONObject(response);
-                    JSONArray array = obj.getJSONArray(TAG_RESULT);
-                    for (int i = 0; i < array.length(); i++) {
-                        JSONObject object = array.getJSONObject(i);
-                        MesinModel mesinModel = new MesinModel(
-                                object.getString(JRES_IDMESIN),
-                                object.getString(JRES_NOMESIN),
-                                object.getString(JRES_SITE),
-                                object.getString(JRES_KETERANGAN)
-                        );
-                        mesinModelList.add(mesinModel);
+                    if (!obj.getString(TAG_RESULT).equalsIgnoreCase("[]")) {
+                        JSONArray array = obj.getJSONArray(TAG_RESULT);
+                        for (int i = 0; i < array.length(); i++) {
+                            JSONObject object = array.getJSONObject(i);
+                            MesinModel mesinModel = new MesinModel(
+                                    object.getString(JRES_IDMESIN),
+                                    object.getString(JRES_NOMESIN),
+                                    object.getString(JRES_SITE),
+                                    object.getString(JRES_KETERANGAN)
+                            );
+                            mesinModelList.add(mesinModel);
+                        }
+                    }else {
+                        Toast.makeText(getApplicationContext(), "Oops, Data Mesin masih kosong!", Toast.LENGTH_LONG).show();
                     }
                     adapter = new MesinAdapter(mesinModelList, getApplicationContext());
                     listView.setAdapter(adapter);

@@ -60,6 +60,7 @@
             </TableRow>
         </TableLayout>
         <EditText
+            android:fontFamily="@font/roboto_mono_medium"
             android:id="@+id/etMasalah"
             android:hint="@string/masalah"
             android:layout_width="match_parent"
@@ -69,17 +70,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <EditText
+                android:fontFamily="@font/roboto_mono_medium"
                 android:id="@+id/etTanggal"
                 android:hint="@string/tanggal"
                 android:layout_width="205dp"
                 android:layout_height="wrap_content" />
             <EditText
+                android:fontFamily="@font/roboto_mono_medium"
                 android:id="@+id/etJam"
                 android:hint="@string/jam"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </LinearLayout>
         <EditText
+            android:fontFamily="@font/roboto_mono_medium"
             android:id="@+id/etShift"
             android:hint="@string/shift"
             android:inputType="number"

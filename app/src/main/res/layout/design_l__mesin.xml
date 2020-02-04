@@ -20,11 +20,11 @@
         android:text="@string/value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:fontFamily="@font/roboto_mono" />
+        app:fontFamily="@font/roboto_mono_medium" />
     <TextView
         android:id="@+id/keterangan"
         android:text="@string/value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:fontFamily="@font/roboto_mono" />
+        app:fontFamily="@font/roboto_mono_medium" />
 </LinearLayout>

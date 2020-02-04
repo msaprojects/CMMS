@@ -1,12 +1,15 @@
 package com.msadev.cmms.List;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -21,7 +24,11 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.iid.FirebaseInstanceId;
+import com.google.firebase.iid.InstanceIdResult;
 import com.msadev.cmms.Adapter.MasalahAdapter;
 import com.msadev.cmms.Adapter.MesinAdapter;
 import com.msadev.cmms.Model.MasalahModel;
@@ -43,12 +50,14 @@ import static com.msadev.cmms.Util.JsonResponse.JRES_ENGGINER;
 import static com.msadev.cmms.Util.JsonResponse.JRES_IDMASALAH;
 import static com.msadev.cmms.Util.JsonResponse.JRES_IDMESIN;
 import static com.msadev.cmms.Util.JsonResponse.JRES_IDPENGGUNA;
+import static com.msadev.cmms.Util.JsonResponse.JRES_IDPENYELESAIAN;
 import static com.msadev.cmms.Util.JsonResponse.JRES_JAM;
 import static com.msadev.cmms.Util.JsonResponse.JRES_KETERANGAN;
 import static com.msadev.cmms.Util.JsonResponse.JRES_MASALAH;
 import static com.msadev.cmms.Util.JsonResponse.JRES_NOMESIN;
 import static com.msadev.cmms.Util.JsonResponse.JRES_SHIFT;
 import static com.msadev.cmms.Util.JsonResponse.JRES_SITE;
+import static com.msadev.cmms.Util.JsonResponse.JRES_STATUS;
 import static com.msadev.cmms.Util.JsonResponse.JRES_TANGGAL;
 import static com.msadev.cmms.Util.JsonResponse.TAG_RESULT;
 import static com.msadev.cmms.Util.Server.IPADDRESS;
@@ -104,6 +113,7 @@ public class L_Masalah extends AppCompatActivity implements View.OnClickListener
         });
 
         loadData();
+//        onTokenRefresh();
 
     }
 
@@ -111,25 +121,29 @@ public class L_Masalah extends AppCompatActivity implements View.OnClickListener
     public boolean onCreateOptionsMenu(Menu menu){
         getMenuInflater().inflate(R.menu.actionsearch, menu);
         menuItem = menu.findItem(R.id.search);
-        searchView = (SearchView) menuItem.getActionView();
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String s) {
-                return false;
-            }
-
-            @Override
-            public boolean onQueryTextChange(String s) {
-
-                if (TextUtils.isEmpty(s)){
-                    adapter.filter("");
-                    listView.clearTextFilter();
-                }else {
-                    adapter.filter(s);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+            searchView = (SearchView) menuItem.getActionView();
+        }
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+            searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+                @Override
+                public boolean onQueryTextSubmit(String s) {
+                    return false;
                 }
-                return true;
-            }
-        });
+
+                @Override
+                public boolean onQueryTextChange(String s) {
+
+                    if (TextUtils.isEmpty(s)){
+                        adapter.filter("");
+                        listView.clearTextFilter();
+                    }else {
+                        adapter.filter(s);
+                    }
+                    return true;
+                }
+            });
+        }
         return true;
     }
 
@@ -139,21 +153,27 @@ public class L_Masalah extends AppCompatActivity implements View.OnClickListener
             public void onResponse(String response) {
                 try {
                     JSONObject obj = new JSONObject(response);
+                    if (!obj.getString(TAG_RESULT).equalsIgnoreCase("[]")){
                     JSONArray array = obj.getJSONArray(TAG_RESULT);
-                    for (int i = 0; i < array.length(); i++) {
-                        JSONObject object = array.getJSONObject(i);
-                        MasalahModel masalahModel = new MasalahModel(
-                                object.getString(JRES_IDMASALAH),
-                                object.getString(JRES_JAM),
-                                object.getString(JRES_TANGGAL),
-                                object.getString(JRES_MASALAH),
-                                object.getString(JRES_SHIFT),
-                                object.getString(JRES_IDMESIN),
-                                object.getString(JRES_IDPENGGUNA),
-                                object.getString(JRES_NOMESIN),
-                                object.getString(JRES_SITE)
-                        );
-                        masalahModels.add(masalahModel);
+                        for (int i = 0; i < array.length(); i++) {
+                            JSONObject object = array.getJSONObject(i);
+                            MasalahModel masalahModel = new MasalahModel(
+                                    object.getString(JRES_IDMASALAH),
+                                    object.getString(JRES_JAM),
+                                    object.getString(JRES_TANGGAL),
+                                    object.getString(JRES_MASALAH),
+                                    object.getString(JRES_SHIFT),
+                                    object.getString(JRES_IDMESIN),
+                                    object.getString(JRES_IDPENGGUNA),
+                                    object.getString(JRES_NOMESIN),
+                                    object.getString(JRES_SITE),
+                                    object.getString(JRES_IDPENYELESAIAN),
+                                    object.getString(JRES_STATUS)
+                            );
+                            masalahModels.add(masalahModel);
+                        }
+                    }else {
+                        Toast.makeText(getApplicationContext(), "Tenang, Belum ada masalah!", Toast.LENGTH_LONG).show();
                     }
                     adapter = new MasalahAdapter(masalahModels, getApplicationContext());
                     listView.setAdapter(adapter);

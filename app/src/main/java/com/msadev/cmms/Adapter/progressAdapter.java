@@ -23,8 +23,8 @@ public class progressAdapter extends ArrayAdapter<ProgressModel> {
         super(context, R.layout.design_l__progress, progressModelList);
         this.context = context;
         this.progressModelList = progressModelList;
-        this.arrayList = new ArrayList<ProgressModel>();
-        this.arrayList.addAll(progressModelList);
+//        this.arrayList = new ArrayList<ProgressModel>();
+//        this.arrayList.addAll(progressModelList);
     }
 
     @Override
@@ -37,7 +37,7 @@ public class progressAdapter extends ArrayAdapter<ProgressModel> {
         TextView jam = (TextView) listData.findViewById(R.id.jam);
         TextView nomesin = (TextView) listData.findViewById(R.id.nomesin);
         TextView engginer = (TextView) listData.findViewById(R.id.engginer);
-        TextView shift = (TextView) listData.findViewById(R.id.shift);
+        TextView shift = (TextView) listData.findViewById(R.id.tvMasalah);
         TextView site = (TextView) listData.findViewById(R.id.site);
         TextView perbaikan = (TextView) listData.findViewById(R.id.perbaikan);
 
@@ -45,7 +45,7 @@ public class progressAdapter extends ArrayAdapter<ProgressModel> {
         jam.setText(pm.getJam());
         nomesin.setText(pm.getNomesin());
         engginer.setText(pm.getEngginer());
-        shift.setText(pm.getShift());
+        shift.setText(pm.getMasalah());
         site.setText(pm.getSite());
         perbaikan.setText(pm.getPerbaikan());
 

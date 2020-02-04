@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "286443035985",
+    "firebase_url": "https://cmms-ccdtc20201.firebaseio.com",
+    "project_id": "cmms-ccdtc20201",
+    "storage_bucket": "cmms-ccdtc20201.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:286443035985:android:7c5c9a55c6a3abf82d8770",
+        "android_client_info": {
+          "package_name": "com.msadev.cmms"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "286443035985-4sdj6lr2tknc3kkho5iploub0kkgvcv5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.msadev.cmms",
+            "certificate_hash": "cf1184de55bfc186339c7ff2c28e2ce0f6392fbb"
+          }
+        },
+        {
+          "client_id": "286443035985-5ivfst1ip1l349oaal0gecpnrub88ui6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkjRBqkKh76bCHmvG3mufJggOP8QqG2DQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "286443035985-5ivfst1ip1l349oaal0gecpnrub88ui6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

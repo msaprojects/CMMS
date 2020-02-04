@@ -12,4 +12,12 @@
     <string name="jam">Jam</string>
     <string name="masalah">Masalah</string>
     <string name="perbaikan">Perbaikan</string>
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+    <string name="barang">Barang</string>
+    <string name="satuan">Satuan</string>
+    <string name="kode">Kode</string>
+    <string name="qty">Qty</string>
+    <string name="strip">\t\t-\t\t</string>
+    <string name="hapus">Hapus</string>
+    <string name="status">Status</string>
 </resources>

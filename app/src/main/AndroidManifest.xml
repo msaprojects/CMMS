@@ -12,7 +12,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Edit.e_Permasalahan"></activity>
+        <activity android:name=".List.L_Timeline"></activity>
+        <activity android:name=".Tambah.i_Checkout" />
+        <activity android:name=".Tambah.i_Penyelesaian" />
+        <activity android:name=".List.L_Barang" />
+        <activity android:name=".Detail.d_Progress" />
+        <activity android:name=".Edit.e_Permasalahan" />
         <activity android:name=".List.L_Progress" />
         <activity android:name=".Tambah.i_Progress" />
         <activity android:name=".List.L_Mesin" />
@@ -27,6 +32,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service android:name=".Service.MyFirebaseMessagingServiceold">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".Service.MyJobService">
+            <intent-filter>
+                <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE" />
+            </intent-filter>
+        </service>
 
         <meta-data
             android:name="preloaded_fonts"

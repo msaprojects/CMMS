@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -23,6 +24,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.msadev.cmms.Adapter.progressAdapter;
+import com.msadev.cmms.Detail.d_Progress;
 import com.msadev.cmms.Model.MasalahModel;
 import com.msadev.cmms.Model.ProgressModel;
 import com.msadev.cmms.R;
@@ -35,6 +37,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static com.msadev.cmms.Util.JsonResponse.DATAMASALAH;
+import static com.msadev.cmms.Util.JsonResponse.DATAPROGRESS;
 import static com.msadev.cmms.Util.JsonResponse.JRES_ENGGINER;
 import static com.msadev.cmms.Util.JsonResponse.JRES_IDMASALAH;
 import static com.msadev.cmms.Util.JsonResponse.JRES_IDMESIN;
@@ -54,12 +57,12 @@ public class L_Progress extends AppCompatActivity {
 
     ListView listView;
     List<ProgressModel> progressModelList;
+    progressAdapter adapter;
     FloatingActionButton fab;
     SwipeRefreshLayout refresh;
     SearchView searchView;
     MenuItem menuItem;
     Menu menu;
-    progressAdapter adapter;
 
     String idmasalah;
 
@@ -95,15 +98,15 @@ public class L_Progress extends AppCompatActivity {
             }
         });
 
-//        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-//                ProgressModel pm = progressAdapter.get(position);
-//                Intent i = new Intent(getApplicationContext(), i_Permasalahan.class );
-//                i.putExtra(DATAMESIN, mesinModel);
-//                startActivity(i);
-//            }
-//        });
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                ProgressModel pm = progressModelList.get(position);
+                Intent i = new Intent(getApplicationContext(), d_Progress.class );
+                i.putExtra(DATAPROGRESS, pm);
+                startActivity(i);
+            }
+        });
 
         loadData();
 
@@ -136,29 +139,34 @@ public class L_Progress extends AppCompatActivity {
     }
 
     private void loadData(){
+//        Log.d("HASIL JSON ", IPADDRESS + "/progress1/"+idmasalah);
         StringRequest stringRequest = new StringRequest(Request.Method.GET, IPADDRESS + "/progress1/"+idmasalah, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 try {
                     JSONObject obj = new JSONObject(response);
-                    JSONArray array = obj.getJSONArray(TAG_RESULT);
-                    for (int i = 0; i < array.length(); i++) {
-                        JSONObject object = array.getJSONObject(i);
-                        ProgressModel pm = new ProgressModel(
-                                object.getString(JRES_IDPROGRESS),
-                                object.getString(JRES_PERBAIKAN),
-                                object.getString(JRES_ENGGINER),
-                                object.getString(JRES_TANGGAL),
-                                object.getString(JRES_SHIFT),
-                                object.getString(JRES_IDMASALAH),
-                                object.getString(JRES_IDPENGGUNA),
-                                object.getString(JRES_JAM),
-                                object.getString(JRES_MASALAH),
-                                object.getString(JRES_IDMESIN),
-                                object.getString(JRES_NOMESIN),
-                                object.getString(JRES_SITE)
-                        );
-                        progressModelList.add(pm);
+                    if (!obj.getString(TAG_RESULT).equalsIgnoreCase("[]")) {
+                        JSONArray array = obj.getJSONArray(TAG_RESULT);
+                        for (int i = 0; i < array.length(); i++) {
+                            JSONObject object = array.getJSONObject(i);
+                            ProgressModel pm = new ProgressModel(
+                                    object.getString(JRES_IDPROGRESS),
+                                    object.getString(JRES_PERBAIKAN),
+                                    object.getString(JRES_ENGGINER),
+                                    object.getString(JRES_TANGGAL),
+                                    object.getString(JRES_SHIFT),
+                                    object.getString(JRES_IDMASALAH),
+                                    object.getString(JRES_IDPENGGUNA),
+                                    object.getString(JRES_JAM),
+                                    object.getString(JRES_MASALAH),
+                                    object.getString(JRES_IDMESIN),
+                                    object.getString(JRES_NOMESIN),
+                                    object.getString(JRES_SITE)
+                            );
+                            progressModelList.add(pm);
+                        }
+                    }else {
+                        Toast.makeText(getApplicationContext(), "Oops, Belum Ada Progress Perbaikan", Toast.LENGTH_LONG).show();
                     }
                     adapter = new progressAdapter(progressModelList, getApplicationContext());
                     listView.setAdapter(adapter);

@@ -1,10 +1,12 @@
 package com.msadev.cmms.Adapter;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.msadev.cmms.Model.MasalahModel;
@@ -40,12 +42,28 @@ public class MasalahAdapter extends ArrayAdapter<MasalahModel> {
         TextView nomesin = (TextView) listData.findViewById(R.id.nomesin);
         TextView site = (TextView) listData.findViewById(R.id.site);
         TextView keterangan = (TextView) listData.findViewById(R.id.keterangan);
+        TextView status = (TextView) listData.findViewById(R.id.tvStatus);
+        LinearLayout warnastatus = (LinearLayout) listData.findViewById(R.id.llstatus);
 
         tgl.setText(mm.getTanggal());
         jam.setText(mm.getJam());
         nomesin.setText(mm.getNomesin());
         site.setText(mm.getSite());
         keterangan.setText(mm.getMasalah());
+        status.setText(mm.getStatus());
+        String var = mm.getStatus();
+        Log.d("hasil output", var);
+
+        if (var.trim().equals("0")){
+            status.setText("Belum Selesai");
+            warnastatus.setBackgroundResource(R.color.red);
+        }else if (var.equals("1")){
+            status.setText("Sudah Selesai");
+            warnastatus.setBackgroundResource(R.color.green);
+        } else {
+            status.setText("Tidak Valid");
+            warnastatus.setBackgroundResource(R.color.green);
+        }
 
         return listData;
     }
