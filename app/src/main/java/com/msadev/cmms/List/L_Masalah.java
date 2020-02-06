@@ -13,6 +13,8 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AbsListView;
+import android.widget.AbsListView.OnScrollListener;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SearchView;
@@ -31,6 +33,7 @@ import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.InstanceIdResult;
 import com.msadev.cmms.Adapter.MasalahAdapter;
 import com.msadev.cmms.Adapter.MesinAdapter;
+import com.msadev.cmms.MainActivity;
 import com.msadev.cmms.Model.MasalahModel;
 import com.msadev.cmms.Model.MesinModel;
 import com.msadev.cmms.R;
@@ -73,6 +76,7 @@ public class L_Masalah extends AppCompatActivity implements View.OnClickListener
     Menu menu;
     String idmasalah, nomesin;
     MasalahAdapter adapter;
+    private int preLast;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,7 +86,8 @@ public class L_Masalah extends AppCompatActivity implements View.OnClickListener
 
         listView = (ListView) findViewById(R.id.listview);
         fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(this);
+//        fab.setOnClickListener(this);
+        fab.hide();
         masalahModels = new ArrayList<>();
 
         refresh = (SwipeRefreshLayout) findViewById(R.id.refresh);
@@ -155,6 +160,7 @@ public class L_Masalah extends AppCompatActivity implements View.OnClickListener
                     JSONObject obj = new JSONObject(response);
                     if (!obj.getString(TAG_RESULT).equalsIgnoreCase("[]")){
                     JSONArray array = obj.getJSONArray(TAG_RESULT);
+
                         for (int i = 0; i < array.length(); i++) {
                             JSONObject object = array.getJSONObject(i);
                             MasalahModel masalahModel = new MasalahModel(
@@ -201,4 +207,35 @@ public class L_Masalah extends AppCompatActivity implements View.OnClickListener
                 startActivity(i);
         }
     }
+    @Override
+    public  void onBackPressed(){
+        super.onBackPressed();
+        Intent i = new Intent(L_Masalah.this, MainActivity.class);
+        startActivity(i);
+        finish();
+    }
+
+//    @Override
+//    public void onScrollStateChanged(AbsListView view, int scrollState) {
+//
+//    }
+//
+//    @Override
+//    public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
+//
+//        if (view.getId() == R.id.listview) {
+//            if (firstVisibleItem == 0) {
+//                refresh.setEnabled(true);
+//                int lastItem = firstVisibleItem + visibleItemCount;
+//                if (lastItem == totalItemCount) {
+//                    if (preLast != lastItem) {
+//                        preLast = lastItem;
+//                        //Toast.makeText(getActivity(), "In Last", Toast.LENGTH_SHORT).show();
+//                    }
+//                }else{}
+//            } else {
+//                refresh.setEnabled(false);
+//            }
+//        }
+//    }
 }

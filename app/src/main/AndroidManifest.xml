@@ -24,8 +24,8 @@
         <activity android:name=".Trigger.convertPerbaikan" />
         <activity android:name=".Trigger.MenuPerbaikan" />
         <activity android:name=".Tambah.i_Permasalahan" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".List.L_Masalah">
+        <activity android:name=".List.L_Masalah" />
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

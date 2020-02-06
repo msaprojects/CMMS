@@ -24,6 +24,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.msadev.cmms.Adapter.MesinAdapter;
+import com.msadev.cmms.MainActivity;
 import com.msadev.cmms.Model.MesinModel;
 import com.msadev.cmms.R;
 import com.msadev.cmms.Tambah.i_Permasalahan;
@@ -161,4 +162,13 @@ public class L_Mesin extends AppCompatActivity {
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(stringRequest);
     }
+
+    @Override
+    public  void onBackPressed(){
+        super.onBackPressed();
+        Intent i = new Intent(L_Mesin.this, MainActivity.class);
+        startActivity(i);
+        finish();
+    }
+
 }

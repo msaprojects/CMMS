@@ -20,4 +20,9 @@
     <string name="strip">\t\t-\t\t</string>
     <string name="hapus">Hapus</string>
     <string name="status">Status</string>
+    <string name="jumlah_masalah">Jumlah Masalah</string>
+    <string name="jumlah_selesai">Jumlah Terselesaikan</string>
+
+    <string name="buka">Open</string>
+    <string name="tutup">Close</string>
 </resources>

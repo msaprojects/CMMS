@@ -1,18 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<androidx.drawerlayout.widget.DrawerLayout
+    android:id="@+id/drawer"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:openDrawer="start"
     tools:context=".MainActivity">
-
-<!--    <com.luseen.spacenavigation.SpaceNavigationView-->
-<!--        android:id="@+id/space"-->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav"
+        android:background="@color/grey"
+        app:menu="@menu/bottomnavigation"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/header"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"/>
+<!--    <androidx.constraintlayout.widget.ConstraintLayout-->
 <!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:layout_gravity="bottom"-->
-<!--        app:active_icon_color="@colors/colorAccent"-->
-<!--        app:inactive_item_color="@color"/>-->
+<!--        android:layout_height="match_parent">-->
+<!--        <androidx.appcompat.widget.Toolbar-->
+<!--            android:id="@+id/toolbar"-->
+<!--            android:minHeight="?attr/actionBarSize"-->
+<!--            android:theme="?attr/actionBarTheme"-->
+<!--            app:navigationIcon="@drawable/ic_menu"-->
+<!--            android:layout_width="0dp"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            android:layout_height="wrap_content"/>-->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@drawable/ge"
+                    android:layout_width="match_parent"
+                    android:layout_height="225dp"/>
+                <LinearLayout
+                    android:background="@color/grey"
+                    android:padding="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                                android:gravity="center"
+                                android:padding="10dp"
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:textColor="@color/red"
+                                    android:textStyle="bold"
+                                    android:textSize="20sp"
+                                    android:text="@string/jumlah_masalah"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+                                <TextView
+                                    android:id="@+id/tvJMasalah"
+                                    android:textColor="@color/gold"
+                                    android:textStyle="bold"
+                                    android:textAllCaps="true"
+                                    android:textSize="26sp"
+                                    android:text="@string/value"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+                <LinearLayout
+                    android:background="@color/grey"
+                    android:padding="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:gravity="center"
+                                android:padding="10dp"
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:textColor="@color/red"
+                                    android:textStyle="bold"
+                                    android:textSize="20sp"
+                                    android:text="@string/jumlah_selesai"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+                                <TextView
+                                    android:id="@+id/tvJSelesai"
+                                    android:textColor="@color/gold"
+                                    android:textStyle="bold"
+                                    android:textAllCaps="true"
+                                    android:textSize="26sp"
+                                    android:text="@string/value"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </LinearLayout>
 
-</RelativeLayout>
+<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+</androidx.drawerlayout.widget.DrawerLayout>
