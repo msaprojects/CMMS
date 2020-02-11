@@ -28,7 +28,12 @@ public class JsonResponse {
     public static final String JRES_SATUAN = "satuan";
     public static final String JRES_QTY = "qty";
     public static final String JRES_BARANG = "barang";
-
+    public static final String JRES_TIPE = "tipe";
+    public static final String JRES_TANGGALPROG = "tanggalprog";
+    public static final String JRES_SHIFTPROG = "shiftprog";
+    public static final String JRES_TANGGALSELESAI = "tanggalselesai";
+    public static final String JRES_KETERANGANSELESAI = "keteranganselesai";
+    public static final String JRES_KETERANGANCHECKOUT = "keterangancheckout";
 
     public static final String DATAMESIN = "DATAMESIN";
     public static final String DATAMASALAH = "DATAMASALAH";

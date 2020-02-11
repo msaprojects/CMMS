@@ -65,7 +65,7 @@ import static com.msadev.cmms.Util.JsonResponse.JRES_TANGGAL;
 import static com.msadev.cmms.Util.JsonResponse.TAG_RESULT;
 import static com.msadev.cmms.Util.Server.IPADDRESS;
 
-public class L_Masalah extends AppCompatActivity implements View.OnClickListener {
+public class L_Masalah extends AppCompatActivity implements ListView.OnScrollListener, View.OnClickListener {
 
     ListView listView;
     List<MasalahModel> masalahModels;
@@ -116,7 +116,7 @@ public class L_Masalah extends AppCompatActivity implements View.OnClickListener
                 startActivity(i);
             }
         });
-
+        listView.setOnScrollListener((AbsListView.OnScrollListener) this);
         loadData();
 //        onTokenRefresh();
 
@@ -215,27 +215,28 @@ public class L_Masalah extends AppCompatActivity implements View.OnClickListener
         finish();
     }
 
-//    @Override
-//    public void onScrollStateChanged(AbsListView view, int scrollState) {
-//
-//    }
-//
-//    @Override
-//    public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
-//
-//        if (view.getId() == R.id.listview) {
-//            if (firstVisibleItem == 0) {
-//                refresh.setEnabled(true);
-//                int lastItem = firstVisibleItem + visibleItemCount;
-//                if (lastItem == totalItemCount) {
-//                    if (preLast != lastItem) {
-//                        preLast = lastItem;
-//                        //Toast.makeText(getActivity(), "In Last", Toast.LENGTH_SHORT).show();
-//                    }
-//                }else{}
-//            } else {
-//                refresh.setEnabled(false);
-//            }
-//        }
-//    }
+
+    @Override
+    public void onScrollStateChanged(AbsListView view, int scrollState) {
+
+    }
+
+    @Override
+    public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
+
+        if (view.getId() == R.id.listview) {
+            if (firstVisibleItem == 0) {
+                refresh.setEnabled(true);
+                int lastItem = firstVisibleItem + visibleItemCount;
+                if (lastItem == totalItemCount) {
+                    if (preLast != lastItem) {
+                        preLast = lastItem;
+                        //Toast.makeText(getActivity(), "In Last", Toast.LENGTH_SHORT).show();
+                    }
+                }else{}
+            } else {
+                refresh.setEnabled(false);
+            }
+        }
+    }
 }

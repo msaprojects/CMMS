@@ -38,12 +38,12 @@ public class CheckoutAdapter2 extends ArrayAdapter<CheckoutModel> {
         CheckoutModel cm = checkoutModelList.get(position);
         id = cm.getIdcheckout();
 
-        TextView kode = (TextView) listData.findViewById(R.id.tvKode);
-        TextView nama = (TextView) listData.findViewById(R.id.tvBarang);
-        TextView satuan = (TextView) listData.findViewById(R.id.tvSatuan);
-        TextView keterangan = (TextView) listData.findViewById(R.id.tvKet);
-        final ImageButton hapus = (ImageButton) listData.findViewById(R.id.btnHapus);
-        TableRow trHapus = (TableRow) listData.findViewById(R.id.trHapus);
+        TextView kode = listData.findViewById(R.id.tvKode);
+        TextView nama = listData.findViewById(R.id.tvBarang);
+        TextView satuan = listData.findViewById(R.id.tvSatuan);
+        TextView keterangan = listData.findViewById(R.id.tvKet);
+        final ImageButton hapus = listData.findViewById(R.id.btnHapus);
+        TableRow trHapus = listData.findViewById(R.id.trHapus);
 
         kode.setText(cm.getKode());
         nama.setText(cm.getBarang());

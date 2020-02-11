@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.os.Bundle;
+import android.os.Handler;
+import android.widget.AbsListView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -53,7 +55,7 @@ import static com.msadev.cmms.Util.JsonResponse.JRES_TANGGAL;
 import static com.msadev.cmms.Util.JsonResponse.TAG_RESULT;
 import static com.msadev.cmms.Util.Server.IPADDRESS;
 
-public class L_Timeline extends AppCompatActivity {
+public class L_Timeline extends AppCompatActivity implements ListView.OnScrollListener {
 
     ListView listView, listView2;
     List<ProgressModel> progressModelList;
@@ -64,6 +66,8 @@ public class L_Timeline extends AppCompatActivity {
     SwipeRefreshLayout refresh;
     TextView tvmesin, tvSite, tvTanggal,tvJam, tvMasalah, tvTanggalP, tvKeterangan;
     String idmasalah;
+    private int preLast;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -75,6 +79,7 @@ public class L_Timeline extends AppCompatActivity {
 
         tvmesin = (TextView) findViewById(R.id.tvNoMesin);
         tvSite = (TextView) findViewById(R.id.tvSite);
+//        refresh = findViewById(R.id.refresh);
         tvTanggal = (TextView) findViewById(R.id.tvTanggal);
         tvJam = (TextView) findViewById(R.id.tvJam);
         tvMasalah = (TextView) findViewById(R.id.tvMasalah);
@@ -92,9 +97,24 @@ public class L_Timeline extends AppCompatActivity {
         tvTanggal.setText(mm.getTanggal());
         tvJam.setText(mm.getJam());
         tvMasalah.setText(mm.getMasalah());
+        listView.setOnScrollListener((AbsListView.OnScrollListener) this);
 //        tvTanggalP.setText(mm.gett());
 //        tvKeterangan.setText(mm.getMasalah());
-
+//        refresh.setColorSchemeResources(R.color.colorAccent, R.color.colorPrimary, R.color.colorPrimaryDark);
+//        refresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+//            @Override
+//            public void onRefresh() {
+//                new Handler().postDelayed(new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        refresh.setRefreshing(false);
+//                        progressModelList.clear();
+//                        loadData();
+//                        Toast.makeText(getApplicationContext(), "Data Berhasil diperbarui!", Toast.LENGTH_LONG).show();
+//                    }
+//                }, 3000);
+//            }
+//        });
     }
 
     private void loadData(){
@@ -188,5 +208,28 @@ public class L_Timeline extends AppCompatActivity {
         );
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(stringRequest);
+    }
+    @Override
+    public void onScrollStateChanged(AbsListView view, int scrollState) {
+
+    }
+
+    @Override
+    public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
+
+        if (view.getId() == R.id.listview) {
+//            if (firstVisibleItem == 0) {
+//                refresh.setEnabled(true);
+                int lastItem = firstVisibleItem + visibleItemCount;
+                if (lastItem == totalItemCount) {
+                    if (preLast != lastItem) {
+                        preLast = lastItem;
+                        //Toast.makeText(getActivity(), "In Last", Toast.LENGTH_SHORT).show();
+                    }
+                }else{}
+//            } else {
+//                refresh.setEnabled(false);
+//            }
+        }
     }
 }

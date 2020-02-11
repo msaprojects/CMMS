@@ -37,13 +37,13 @@ public class MasalahAdapter extends ArrayAdapter<MasalahModel> {
         View listData = inflater.inflate(R.layout.design_l__masalah, null, true);
         MasalahModel mm = masalahModelList.get(position);
 
-        TextView tgl = (TextView) listData.findViewById(R.id.tgl);
-        TextView jam = (TextView) listData.findViewById(R.id.jam);
-        TextView nomesin = (TextView) listData.findViewById(R.id.nomesin);
-        TextView site = (TextView) listData.findViewById(R.id.site);
-        TextView keterangan = (TextView) listData.findViewById(R.id.keterangan);
-        TextView status = (TextView) listData.findViewById(R.id.tvStatus);
-        LinearLayout warnastatus = (LinearLayout) listData.findViewById(R.id.llstatus);
+        TextView tgl = listData.findViewById(R.id.tgl);
+        TextView jam = listData.findViewById(R.id.jam);
+        TextView nomesin = listData.findViewById(R.id.nomesin);
+        TextView site = listData.findViewById(R.id.site);
+        TextView keterangan = listData.findViewById(R.id.keterangan);
+        TextView status = listData.findViewById(R.id.tvStatus);
+        LinearLayout warnastatus = listData.findViewById(R.id.llstatus);
 
         tgl.setText(mm.getTanggal());
         jam.setText(mm.getJam());

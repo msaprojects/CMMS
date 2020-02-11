@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SearchView;
@@ -53,7 +54,7 @@ import static com.msadev.cmms.Util.JsonResponse.JRES_TANGGAL;
 import static com.msadev.cmms.Util.JsonResponse.TAG_RESULT;
 import static com.msadev.cmms.Util.Server.IPADDRESS;
 
-public class L_Progress extends AppCompatActivity {
+public class L_Progress extends AppCompatActivity implements ListView.OnScrollListener {
 
     ListView listView;
     List<ProgressModel> progressModelList;
@@ -63,6 +64,7 @@ public class L_Progress extends AppCompatActivity {
     SearchView searchView;
     MenuItem menuItem;
     Menu menu;
+    private int preLast;
 
     String idmasalah;
 
@@ -107,7 +109,7 @@ public class L_Progress extends AppCompatActivity {
                 startActivity(i);
             }
         });
-
+        listView.setOnScrollListener((AbsListView.OnScrollListener) this);
         loadData();
 
     }
@@ -185,5 +187,27 @@ public class L_Progress extends AppCompatActivity {
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(stringRequest);
     }
+    @Override
+    public void onScrollStateChanged(AbsListView view, int scrollState) {
 
+    }
+
+    @Override
+    public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
+
+        if (view.getId() == R.id.listview) {
+            if (firstVisibleItem == 0) {
+                refresh.setEnabled(true);
+                int lastItem = firstVisibleItem + visibleItemCount;
+                if (lastItem == totalItemCount) {
+                    if (preLast != lastItem) {
+                        preLast = lastItem;
+                        //Toast.makeText(getActivity(), "In Last", Toast.LENGTH_SHORT).show();
+                    }
+                }else{}
+            } else {
+                refresh.setEnabled(false);
+            }
+        }
+    }
 }

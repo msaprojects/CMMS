@@ -33,19 +33,19 @@ public class progressAdapter extends ArrayAdapter<ProgressModel> {
         View listData = inflater.inflate(R.layout.design_l__progress, null, true);
         ProgressModel pm = progressModelList.get(position);
 
-        TextView tgl = (TextView) listData.findViewById(R.id.tgl);
-        TextView jam = (TextView) listData.findViewById(R.id.jam);
-        TextView nomesin = (TextView) listData.findViewById(R.id.nomesin);
-        TextView engginer = (TextView) listData.findViewById(R.id.engginer);
-        TextView shift = (TextView) listData.findViewById(R.id.tvMasalah);
-        TextView site = (TextView) listData.findViewById(R.id.site);
-        TextView perbaikan = (TextView) listData.findViewById(R.id.perbaikan);
+        TextView tgl = listData.findViewById(R.id.tgl);
+        TextView jam = listData.findViewById(R.id.jam);
+        TextView nomesin = listData.findViewById(R.id.nomesin);
+        TextView engginer = listData.findViewById(R.id.engginer);
+        TextView masalah = listData.findViewById(R.id.tvMasalah);
+        TextView site = listData.findViewById(R.id.site);
+        TextView perbaikan = listData.findViewById(R.id.perbaikan);
 
         tgl.setText(pm.getTanggal());
         jam.setText(pm.getJam());
         nomesin.setText(pm.getNomesin());
         engginer.setText(pm.getEngginer());
-        shift.setText(pm.getMasalah());
+        masalah.setText(pm.getMasalah());
         site.setText(pm.getSite());
         perbaikan.setText(pm.getPerbaikan());
 

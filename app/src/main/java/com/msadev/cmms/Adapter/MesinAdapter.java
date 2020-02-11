@@ -34,9 +34,9 @@ public class MesinAdapter extends ArrayAdapter<MesinModel> {
         View listData = inflater.inflate(R.layout.design_l__mesin, null, true);
         MesinModel mm = mesinModelList.get(position);
 
-        TextView tvnomesin = (TextView) listData.findViewById(R.id.nomesin);
-        TextView tvsite = (TextView) listData.findViewById(R.id.site);
-        TextView tvketerangan = (TextView) listData.findViewById(R.id.keterangan);
+        TextView tvnomesin = listData.findViewById(R.id.nomesin);
+        TextView tvsite = listData.findViewById(R.id.site);
+        TextView tvketerangan = listData.findViewById(R.id.keterangan);
 
         tvnomesin.setText(mm.getNomesin());
         tvsite.setText(mm.getSite());

@@ -25,4 +25,7 @@
 
     <string name="buka">Open</string>
     <string name="tutup">Close</string>
+    <string name="tgl_progres">Tgl Progres</string>
+    <string name="progres">Progres</string>
+    <string name="tgl_selesai">Tgl Selesai</string>
 </resources>

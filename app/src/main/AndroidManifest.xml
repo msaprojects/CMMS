@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.msadev.cmms">
+    package="com.msadev.cmms"
+    android:targetSandboxVersion="1">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -11,21 +12,51 @@
         android:networkSecurityConfig="@xml/network_permission"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".List.L_Timeline"></activity>
-        <activity android:name=".Tambah.i_Checkout" />
-        <activity android:name=".Tambah.i_Penyelesaian" />
-        <activity android:name=".List.L_Barang" />
-        <activity android:name=".Detail.d_Progress" />
-        <activity android:name=".Edit.e_Permasalahan" />
-        <activity android:name=".List.L_Progress" />
-        <activity android:name=".Tambah.i_Progress" />
-        <activity android:name=".List.L_Mesin" />
-        <activity android:name=".Trigger.convertPerbaikan" />
-        <activity android:name=".Trigger.MenuPerbaikan" />
-        <activity android:name=".Tambah.i_Permasalahan" />
-        <activity android:name=".List.L_Masalah" />
-        <activity android:name=".MainActivity">
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".List.L_Timeline2"></activity>
+        <activity
+            android:name=".List.L_Timeline"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Tambah.i_Checkout"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Tambah.i_Penyelesaian"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".List.L_Barang"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Detail.d_Progress"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Edit.e_Permasalahan"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".List.L_Progress"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Tambah.i_Progress"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".List.L_Mesin"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Trigger.convertPerbaikan"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Trigger.MenuPerbaikan"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Tambah.i_Permasalahan"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".List.L_Masalah"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

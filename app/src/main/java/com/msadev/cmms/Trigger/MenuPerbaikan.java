@@ -24,6 +24,7 @@ import com.msadev.cmms.Edit.e_Permasalahan;
 import com.msadev.cmms.List.L_Masalah;
 import com.msadev.cmms.List.L_Progress;
 import com.msadev.cmms.List.L_Timeline;
+import com.msadev.cmms.List.L_Timeline2;
 import com.msadev.cmms.Model.MasalahModel;
 import com.msadev.cmms.R;
 import com.msadev.cmms.Tambah.i_Penyelesaian;
@@ -124,7 +125,7 @@ public class MenuPerbaikan extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }else if (itemView.equals("Timeline Masalah")){
-                intent = new Intent(getApplicationContext(), L_Timeline.class);
+                intent = new Intent(getApplicationContext(), L_Timeline2.class);
                 intent.putExtra(DATAMASALAH, mm);
                 startActivity(intent);
                 finish();

@@ -19,7 +19,7 @@ public class MesinModel implements Parcelable {
     }
 
     public String getAll(){
-        return nomesin+site;
+        return nomesin+site+keterangan;
     }
 
     public String getNomesin() {
