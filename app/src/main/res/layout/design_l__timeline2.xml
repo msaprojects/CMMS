@@ -6,163 +6,273 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="5dp"
+    android:padding="3dp"
     tools:context=".List.L_Timeline2">
-    <TableLayout
-        android:id="@+id/tl"
+    <TextView
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:id="@+id/tvvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/value"
+        app:fontFamily="@font/roboto_mono_medium" />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/crdview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <TableRow android:id="@+id/trTgl">
-            <TextView
-                android:id="@+id/tvTgl"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Tgl Masalah"
-                app:fontFamily="@font/roboto_mono_medium" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/titikdua"
-                app:fontFamily="@font/roboto_mono_medium" />
-            <TextView
-                android:id="@+id/tgl"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/value"
-                app:fontFamily="@font/roboto_mono_medium" />
-        </TableRow>
-        <TableRow android:id="@+id/trJam">
-            <TextView
-                android:id="@+id/tvJam"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/jam"
-                app:fontFamily="@font/roboto_mono_medium" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/titikdua"
-                app:fontFamily="@font/roboto_mono_medium" />
-            <TextView
-                android:id="@+id/jam"
-                android:text="@string/value"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:fontFamily="@font/roboto_mono_medium" />
-        </TableRow>
-        <TableRow android:id="@+id/trMasalah">
-            <TextView
-                android:id="@+id/tvMasalah"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/masalah"
-                app:fontFamily="@font/roboto_mono_medium" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/titikdua"
-                app:fontFamily="@font/roboto_mono_medium" />
-            <TextView
-                android:id="@+id/Masalah"
-                android:text="@string/value"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:fontFamily="@font/roboto_mono_medium" />
-        </TableRow>
-        <TableRow android:id="@+id/trEngginer">
-            <TextView
-                android:id="@+id/tvEngginer"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/engginer"
-                app:fontFamily="@font/roboto_mono_medium" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/titikdua"
-                app:fontFamily="@font/roboto_mono_medium" />
-            <TextView
-                android:id="@+id/engginer"
-                android:text="@string/value"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:fontFamily="@font/roboto_mono_medium" />
-        </TableRow>
-        <TableRow android:id="@+id/trTglProgress">
-            <TextView
-                android:id="@+id/tvTglProgress"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/tgl_progres"
-                app:fontFamily="@font/roboto_mono_medium" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/titikdua"
-                app:fontFamily="@font/roboto_mono_medium" />
-            <TextView
-                android:id="@+id/tgl_progress"
-                android:text="@string/value"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:fontFamily="@font/roboto_mono_medium" />
-        </TableRow>
-        <TableRow android:id="@+id/trProgress">
-            <TextView
-                android:id="@+id/tvProgress"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/progres"
-                app:fontFamily="@font/roboto_mono_medium" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/titikdua"
-                app:fontFamily="@font/roboto_mono_medium" />
-            <TextView
-                android:id="@+id/progress"
-                android:text="@string/value"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:fontFamily="@font/roboto_mono_medium" />
-        </TableRow>
-        <TableRow android:id="@+id/trTglSelesai">
-            <TextView
-                android:id="@+id/tvTglSelesai"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/tgl_selesai"
-                app:fontFamily="@font/roboto_mono_medium" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/titikdua"
-                app:fontFamily="@font/roboto_mono_medium" />
-            <TextView
-                android:id="@+id/tgl_selesai"
-                android:text="@string/value"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:fontFamily="@font/roboto_mono_medium" />
-        </TableRow>
-        <TableRow android:id="@+id/trketeranganselesai">
-            <TextView
-                android:id="@+id/tvKeterangan"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/keterangan"
-                app:fontFamily="@font/roboto_mono_medium" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/titikdua"
-                app:fontFamily="@font/roboto_mono_medium" />
-            <TextView
-                android:id="@+id/keteranganselesai"
-                android:text="@string/value"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:fontFamily="@font/roboto_mono_medium" />
-        </TableRow>
-    </TableLayout>
+        <TableLayout
+            android:layout_margin="10dp"
+            android:id="@+id/tl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TableRow android:id="@+id/trTgl">
+                <TextView
+                    android:id="@+id/tvTgl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tgl Masalah"
+                    app:fontFamily="@font/roboto_mono_medium" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/titikdua"
+                    app:fontFamily="@font/roboto_mono_medium" />
+                <TextView
+                    android:id="@+id/tgl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/value"
+                    app:fontFamily="@font/roboto_mono_medium" />
+            </TableRow>
+            <TableRow android:id="@+id/trJam">
+                <TextView
+                    android:id="@+id/tvJam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/jam"
+                    app:fontFamily="@font/roboto_mono_medium" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/titikdua"
+                    app:fontFamily="@font/roboto_mono_medium" />
+                <TextView
+                    android:id="@+id/jam"
+                    android:text="@string/value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:fontFamily="@font/roboto_mono_medium" />
+            </TableRow>
+            <TableRow android:id="@+id/trMasalah">
+                <TextView
+                    android:id="@+id/tvMasalah"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/masalah"
+                    app:fontFamily="@font/roboto_mono_medium" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/titikdua"
+                    app:fontFamily="@font/roboto_mono_medium" />
+                <TextView
+                    android:id="@+id/Masalah"
+                    android:text="@string/value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:fontFamily="@font/roboto_mono_medium" />
+            </TableRow>
+            <TableRow android:id="@+id/trEngginer">
+                <TextView
+                    android:id="@+id/tvEngginer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/engginer"
+                    app:fontFamily="@font/roboto_mono_medium" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/titikdua"
+                    app:fontFamily="@font/roboto_mono_medium" />
+                <TextView
+                    android:id="@+id/engginer"
+                    android:text="@string/value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:fontFamily="@font/roboto_mono_medium" />
+            </TableRow>
+            <TableRow android:id="@+id/trTglProgress">
+                <TextView
+                    android:id="@+id/tvTglProgress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tgl_progres"
+                    app:fontFamily="@font/roboto_mono_medium" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/titikdua"
+                    app:fontFamily="@font/roboto_mono_medium" />
+                <TextView
+                    android:id="@+id/tgl_progress"
+                    android:text="@string/value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:fontFamily="@font/roboto_mono_medium" />
+            </TableRow>
+            <TableRow android:id="@+id/trProgress">
+                <TextView
+                    android:id="@+id/tvProgress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/progres"
+                    app:fontFamily="@font/roboto_mono_medium" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/titikdua"
+                    app:fontFamily="@font/roboto_mono_medium" />
+                <TextView
+                    android:id="@+id/progress"
+                    android:text="@string/value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:fontFamily="@font/roboto_mono_medium" />
+            </TableRow>
+            <TableRow android:id="@+id/trTglSelesai">
+                <TextView
+                    android:id="@+id/tvTglSelesai"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tgl_selesai"
+                    app:fontFamily="@font/roboto_mono_medium" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/titikdua"
+                    app:fontFamily="@font/roboto_mono_medium" />
+                <TextView
+                    android:id="@+id/tgl_selesai"
+                    android:text="@string/value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:fontFamily="@font/roboto_mono_medium" />
+            </TableRow>
+            <TableRow android:id="@+id/trketeranganselesai">
+                <TextView
+                    android:id="@+id/tvKeterangan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/keterangan"
+                    app:fontFamily="@font/roboto_mono_medium" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/titikdua"
+                    app:fontFamily="@font/roboto_mono_medium" />
+                <TextView
+                    android:id="@+id/keteranganselesai"
+                    android:text="@string/value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:fontFamily="@font/roboto_mono_medium" />
+            </TableRow>
+            <TableRow android:id="@+id/trkode">
+                <TextView
+                    android:id="@+id/tvKode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/kode"
+                    app:fontFamily="@font/roboto_mono_medium" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/titikdua"
+                    app:fontFamily="@font/roboto_mono_medium" />
+                <TextView
+                    android:id="@+id/kode"
+                    android:text="@string/value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:fontFamily="@font/roboto_mono_medium" />
+            </TableRow>
+            <TableRow android:id="@+id/trnama">
+                <TextView
+                    android:id="@+id/tvNama"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/barang"
+                    app:fontFamily="@font/roboto_mono_medium" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/titikdua"
+                    app:fontFamily="@font/roboto_mono_medium" />
+                <TextView
+                    android:id="@+id/nama"
+                    android:text="@string/value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:fontFamily="@font/roboto_mono_medium" />
+            </TableRow>
+            <TableRow android:id="@+id/trqty">
+                <TextView
+                    android:id="@+id/tvqty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/qty"
+                    app:fontFamily="@font/roboto_mono_medium" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/titikdua"
+                    app:fontFamily="@font/roboto_mono_medium" />
+                <TextView
+                    android:id="@+id/qty"
+                    android:text="@string/value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:fontFamily="@font/roboto_mono_medium" />
+            </TableRow>
+            <TableRow android:id="@+id/trsatuan">
+                <TextView
+                    android:id="@+id/tvSatuan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/satuan"
+                    app:fontFamily="@font/roboto_mono_medium" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/titikdua"
+                    app:fontFamily="@font/roboto_mono_medium" />
+                <TextView
+                    android:id="@+id/satuan"
+                    android:text="@string/value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:fontFamily="@font/roboto_mono_medium" />
+            </TableRow>
+            <TableRow android:id="@+id/trketeranganbrng">
+                <TextView
+                    android:id="@+id/tvKeteranganbrng"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/keterangan"
+                    app:fontFamily="@font/roboto_mono_medium" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/titikdua"
+                    app:fontFamily="@font/roboto_mono_medium" />
+                <TextView
+                    android:id="@+id/keteranganbrng"
+                    android:text="@string/value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:fontFamily="@font/roboto_mono_medium" />
+            </TableRow>
+        </TableLayout>
+    </androidx.cardview.widget.CardView>
+
 </LinearLayout>

@@ -9,6 +9,8 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
+import androidx.cardview.widget.CardView;
+
 import com.msadev.cmms.Model.TimelineModel;
 import com.msadev.cmms.R;
 
@@ -33,6 +35,9 @@ public class TimelineAdapter extends ArrayAdapter<TimelineModel> {
         View listData = inflater.inflate(R.layout.design_l__timeline2, null, true);
         TimelineModel tm = timelineModelList.get(position);
 
+        CardView crdview = listData.findViewById(R.id.crdview);
+
+//        TextView status     = listData.findViewById(R.id.tvStatus);
         TextView tgl_masalah     = listData.findViewById(R.id.tgl);
         TextView jam = listData.findViewById(R.id.jam);
         TextView masalah = listData.findViewById(R.id.Masalah);
@@ -41,6 +46,11 @@ public class TimelineAdapter extends ArrayAdapter<TimelineModel> {
         TextView progress = listData.findViewById(R.id.progress);
         TextView tgl_selesai = listData.findViewById(R.id.tgl_selesai);
         TextView ket_selesai = listData.findViewById(R.id.keteranganselesai);
+        TextView kode = listData.findViewById(R.id.tvKode);
+        TextView barang = listData.findViewById(R.id.tvNama);
+        TextView qty = listData.findViewById(R.id.tvqty);
+        TextView satuan = listData.findViewById(R.id.tvSatuan);
+        TextView keteranganbrng = listData.findViewById(R.id.tvKeteranganbrng);
 
         TableRow trtanggal = listData.findViewById(R.id.trTgl);
         TableRow trjam = listData.findViewById(R.id.trJam);
@@ -50,9 +60,15 @@ public class TimelineAdapter extends ArrayAdapter<TimelineModel> {
         TableRow trprogress = listData.findViewById(R.id.trProgress);
         TableRow trtglselesai = listData.findViewById(R.id.trTglSelesai);
         TableRow trketselesai = listData.findViewById(R.id.trketeranganselesai);
+        TableRow trKode = listData.findViewById(R.id.trkode);
+        TableRow trBarang = listData.findViewById(R.id.trnama);
+        TableRow trQty = listData.findViewById(R.id.trqty);
+        TableRow trSatuan = listData.findViewById(R.id.trsatuan);
+        TableRow trKetBrng = listData.findViewById(R.id.trketeranganbrng);
 
         TableLayout tl = listData.findViewById(R.id.tl);
 
+        TextView tvStatus = listData.findViewById(R.id.tvvStatus);
         TextView tvTanggal = listData.findViewById(R.id.tvTgl);
         TextView tvJam = listData.findViewById(R.id.tvJam);
         TextView tvMasalah = listData.findViewById(R.id.tvMasalah);
@@ -61,37 +77,83 @@ public class TimelineAdapter extends ArrayAdapter<TimelineModel> {
         TextView tvProgress = listData.findViewById(R.id.tvProgress);
         TextView tvTglSelesai = listData.findViewById(R.id.tvTglSelesai);
         TextView tvKeteranganSelesai = listData.findViewById(R.id.tvKeterangan);
+        TextView tvKode = listData.findViewById(R.id.tvKode);
+        TextView tvBarang = listData.findViewById(R.id.tvNama);
+        TextView tvQty = listData.findViewById(R.id.tvqty);
+        TextView tvSatuan = listData.findViewById(R.id.tvSatuan);
+        TextView tvketbrng = listData.findViewById(R.id.tvKeteranganbrng);
 
         String Sengginer = tm.getEngginer();
         String Stglprogres = tm.getTanggalprog();
         String Stglselesai = tm.getTanggalsellesai();
         String Sketerangan = tm.getKeteranganselesai();
         String tipe = tm.getTipe();
+        String vTipe = "";
         String Space = "";
 
-        if (tipe.equals("2")){
-            tl.setBackgroundResource(R.color.gold);
-            tvTanggal.setText("\t\tTanggal : \t");
-            tvJam.setText("\t\tJam : \t");
-            tvMasalah.setText("\t\tMasalah : \t");
+//        status.setText("Tipe");
+        if (tipe.equals("1")){
+            vTipe = "Masalah";
+            tvStatus.setText(vTipe);
+            trtglselesai.setVisibility(GONE);
+            trketselesai.setVisibility(GONE);
+            trengginer.setVisibility(GONE);
+            trtglprogres.setVisibility(GONE);
+            trKode.setVisibility(GONE);
+            trBarang.setVisibility(GONE);
+            trQty.setVisibility(GONE);
+            trSatuan.setVisibility(GONE);
+            trKetBrng.setVisibility(GONE);
+        }else if (tipe.equals("2")){
+            vTipe = "\t\tProgress";
+            tvStatus.setText(vTipe);
+            trtanggal.setVisibility(GONE);
+            trjam.setVisibility(GONE);
+            trmasalah.setVisibility(GONE);
+            trtglselesai.setVisibility(GONE);
+            trketselesai.setVisibility(GONE);
+            trKode.setVisibility(GONE);
+            trBarang.setVisibility(GONE);
+            trQty.setVisibility(GONE);
+            trSatuan.setVisibility(GONE);
+            trKetBrng.setVisibility(GONE);
+//            crdview.setBackgroundResource(R.color.gold);
             tvengginer.setText("\t\tEngginer : \t");
             tvTglProgress.setText("\t\tTgl Progress : \t");
             tvProgress.setText("\t\tProgress : \t");
-            tvTglSelesai.setText("\t\tTgl Selesai : \t");
-            tvKeteranganSelesai.setText("\t\tKeterangan : \t");
         }else if (tipe.equals("3")){
-            tl.setBackgroundResource(R.color.green);
-            tvTanggal.setText("\t\t\t\tTanggal : \t");
-            tvJam.setText("\t\t\t\tJam : \t");
-            tvMasalah.setText("\t\t\t\tMasalah : \t");
-            tvengginer.setText("\t\t\t\tEngginer : \t");
-            tvTglProgress.setText("\t\t\t\tTgl Progress : \t");
-            tvProgress.setText("\t\t\t\tProgress : \t");
-            tvTglSelesai.setText("\t\t\t\tTgl Selesai : \t");
-            tvKeteranganSelesai.setText("\t\t\t\tKeterangan : \t");
+            vTipe = "Penyelesaian";
+            tvStatus.setText(vTipe);
+//            trtanggal.setVisibility(GONE);
+            trjam.setVisibility(GONE);
+//            trmasalah.setVisibility(GONE);
+            trengginer.setVisibility(GONE);
+            trtglprogres.setVisibility(GONE);
+//            trprogress.setVisibility(GONE);
+            trKode.setVisibility(GONE);
+            trBarang.setVisibility(GONE);
+            trQty.setVisibility(GONE);
+            trSatuan.setVisibility(GONE);
+            trKetBrng.setVisibility(GONE);
+        }else if (tipe.equals("4")){
+            vTipe = "\t\tKomponen Yang di pakai";
+            tvStatus.setText(vTipe);
+            trtanggal.setVisibility(GONE);
+            trjam.setVisibility(GONE);
+            trmasalah.setVisibility(GONE);
+            trengginer.setVisibility(GONE);
+            trtglprogres.setVisibility(GONE);
+            trprogress.setVisibility(GONE);
+            trtglselesai.setVisibility(GONE);
+            trketselesai.setVisibility(GONE);
+            tvKode.setText("\t\tKode : \t");
+            tvBarang.setText("\t\tBarang : \t");
+            tvQty.setText("\t\tQty : \t");
+            tvSatuan.setText("\t\tSatuan : \t");
+            tvketbrng.setText("\t\tKeterangan : \t");
         }
 
-        tgl_masalah.setText(tm.getTanggal());
+        tgl_masalah.setText(tm.getMasalah());
         jam.setText(tm.getJam());
         masalah.setText(tm.getMasalah());
         engginer.setText(tm.getEngginer());
@@ -99,6 +161,11 @@ public class TimelineAdapter extends ArrayAdapter<TimelineModel> {
         progress.setText(tm.getPerbaikan());
         tgl_selesai.setText(tm.getTanggalsellesai());
         ket_selesai.setText(tm.getKeteranganselesai());
+        tvKode.setText(tm.getKode());
+        tvBarang.setText(tm.getBarang());
+        tvQty.setText(tm.getQty());
+        tvSatuan.setText(tm.getSaatuan());
+        tvketbrng.setText(tm.getKeterangancheckout());
 
         return listData;
     }
