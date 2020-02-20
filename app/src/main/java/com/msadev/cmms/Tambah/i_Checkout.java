@@ -55,7 +55,7 @@ public class i_Checkout extends AppCompatActivity implements View.OnClickListene
     Button btnsSimpan;
     MasalahModel mm;
     BarangModel bm;
-    String idmasalah, idbarang, idsatuan;
+    String idmasalah, idbarang, idsatuan, satuan;
     Calendar kalender;
     DatePickerDialog.OnDateSetListener tanggal;
 
@@ -83,7 +83,8 @@ public class i_Checkout extends AppCompatActivity implements View.OnClickListene
         tvBarang.setText(bm.getNama());
         tvSatuan.setText(bm.getSatuan());
         tvMasalah.setText(mm.getMasalah());
-
+        satuan = bm.getSatuan();
+        Toast.makeText(getApplicationContext(), satuan+" - "+idmasalah+" - "+idbarang, Toast.LENGTH_LONG).show();
         //DATE PICKER
         SimpleDateFormat formatTanggal = new SimpleDateFormat("dd-MM-yyyy");
         Date Tanggal = new Date();
@@ -137,7 +138,7 @@ public class i_Checkout extends AppCompatActivity implements View.OnClickListene
                 Map<String, String> params = new HashMap<String, String>();
                 params.put(JRES_IDMASALAH, idmasalah);
                 params.put(JRES_IDBARANG, idbarang);
-                params.put(JRES_IDSATUAN, idsatuan);
+                params.put(JRES_IDSATUAN, satuan);
                 params.put(JRES_QTY, qty);
                 params.put(JRES_TANGGAL, tanggal);
                 params.put(JRES_KETERANGAN, keterangan);
@@ -150,26 +151,32 @@ public class i_Checkout extends AppCompatActivity implements View.OnClickListene
     @Override
     public void onClick(View view) {
         if (view == btnsSimpan){
-            AlertDialog.Builder builder = new AlertDialog.Builder(i_Checkout.this);
-            builder.setMessage("Pastikan Data yang anda masukkan benar!");
-            builder.setPositiveButton("Sudah Benar", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
-                    tambahData();
-                    Intent intent = new Intent(getApplicationContext(), i_Penyelesaian.class);
-                    intent.putExtra(DATAMASALAH, mm);
-                    startActivity(intent);
-                    finish();
-                }
-            });
-            builder.setNegativeButton("Cek Lagi", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
-                    dialogInterface.cancel();
-                }
-            });
-            AlertDialog alert = builder.create();
-            alert.show();
+            String qty = etQty.getText().toString().trim();
+            String ket = etKeterangan.getText().toString().trim();
+            if ((qty.equals(""))||(ket.equals(""))){
+                Toast.makeText(getApplicationContext(), "Kolom Harus Diisi!", Toast.LENGTH_LONG).show();
+            }else {
+                AlertDialog.Builder builder = new AlertDialog.Builder(i_Checkout.this);
+                builder.setMessage("Pastikan Data yang anda masukkan benar!");
+                builder.setPositiveButton("Sudah Benar", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        tambahData();
+                        Intent intent = new Intent(getApplicationContext(), i_Penyelesaian.class);
+                        intent.putExtra(DATAMASALAH, mm);
+                        startActivity(intent);
+                        finish();
+                    }
+                });
+                builder.setNegativeButton("Cek Lagi", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.cancel();
+                    }
+                });
+                AlertDialog alert = builder.create();
+                alert.show();
+            }
         }
     }
 }

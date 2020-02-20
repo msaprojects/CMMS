@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -135,25 +136,33 @@ public class i_Progress extends AppCompatActivity implements View.OnClickListene
     @Override
     public void onClick(View view) {
         if (view == btnSimpan){
-            AlertDialog.Builder builder = new AlertDialog.Builder(i_Progress.this);
-            builder.setMessage("Pastikan Data yang anda masukkan benar!");
-            builder.setPositiveButton("Sudah Benar", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
-                    tambahData();
-                    Intent intent = new Intent(i_Progress.this, L_Masalah.class);
-                    startActivity(intent);
-                    finish();
-                }
-            });
-            builder.setNegativeButton("Cek Lagi", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
-                    dialogInterface.cancel();
-                }
-            });
-            AlertDialog alert = builder.create();
-            alert.show();
+            String perbaikan  = etPerbaikan.getText().toString().trim();
+            String engineer  = etEngginer.getText().toString().trim();
+            String tgl  = etTanggal.getText().toString().trim();
+            String shift  = etShift.getText().toString().trim();
+            if ((perbaikan.equals(""))||(engineer.equals(""))||(tgl.equals(""))||(shift.equals(""))){
+                Toast.makeText(getApplicationContext(), "Kolom Harus Diisi!", Toast.LENGTH_LONG).show();
+            }else {
+                AlertDialog.Builder builder = new AlertDialog.Builder(i_Progress.this);
+                builder.setMessage("Pastikan Data yang anda masukkan benar!");
+                builder.setPositiveButton("Sudah Benar", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        tambahData();
+                        Intent intent = new Intent(i_Progress.this, L_Masalah.class);
+                        startActivity(intent);
+                        finish();
+                    }
+                });
+                builder.setNegativeButton("Cek Lagi", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.cancel();
+                    }
+                });
+                AlertDialog alert = builder.create();
+                alert.show();
+            }
         }
     }
 }

@@ -234,25 +234,31 @@ public class i_Penyelesaian extends AppCompatActivity implements View.OnClickLis
             finish();
         }
         if (view == btnSimpan){
-            AlertDialog.Builder builder = new AlertDialog.Builder(i_Penyelesaian.this);
-            builder.setMessage("Pastikan Data yang anda masukkan benar!");
-            builder.setPositiveButton("Sudah Benar", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
-                    tambahData();
-                    Intent intent = new Intent(i_Penyelesaian.this, L_Masalah.class);
-                    startActivity(intent);
-                    finish();
-                }
-            });
-            builder.setNegativeButton("Cek Lagi", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
-                    dialogInterface.cancel();
-                }
-            });
-            AlertDialog alert = builder.create();
-            alert.show();
+            String tgl = etTanggal.getText().toString().trim();
+            String ket = etKeterangan.getText().toString().trim();
+            if ((tgl.equals(""))||(ket.equals(""))){
+                Toast.makeText(getApplicationContext(), "Kolom Harus Diisi", Toast.LENGTH_LONG).show();
+            }else {
+                AlertDialog.Builder builder = new AlertDialog.Builder(i_Penyelesaian.this);
+                builder.setMessage("Pastikan Data yang anda masukkan benar!");
+                builder.setPositiveButton("Sudah Benar", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        tambahData();
+                        Intent intent = new Intent(i_Penyelesaian.this, L_Masalah.class);
+                        startActivity(intent);
+                        finish();
+                    }
+                });
+                builder.setNegativeButton("Cek Lagi", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.cancel();
+                    }
+                });
+                AlertDialog alert = builder.create();
+                alert.show();
+            }
         }
     }
 }

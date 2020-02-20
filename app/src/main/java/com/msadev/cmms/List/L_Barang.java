@@ -8,6 +8,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -137,12 +138,13 @@ public class L_Barang extends AppCompatActivity implements ListView.OnScrollList
     }
 
     private void loadData(){
+        Log.d("Url Barang", IPADDRESS+"/barang");
         StringRequest stringRequest = new StringRequest(Request.Method.GET, IPADDRESS + "/barang", new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 try {
                     JSONObject obj = new JSONObject(response);
-                    if (!obj.getString(TAG_RESULT).equalsIgnoreCase("[]")){
+//                    if (!obj.getString(TAG_RESULT).equalsIgnoreCase("[]")){
                         JSONArray array = obj.getJSONArray(TAG_RESULT);
                         for (int i = 0; i < array.length(); i++) {
                             JSONObject object = array.getJSONObject(i);
@@ -157,9 +159,9 @@ public class L_Barang extends AppCompatActivity implements ListView.OnScrollList
                             );
                             barangModelList.add(bm);
                         }
-                    }else {
-                        Toast.makeText(getApplicationContext(), "Tenang, Belum ada masalah!", Toast.LENGTH_LONG).show();
-                    }
+//                    }else {
+//                        Toast.makeText(getApplicationContext(), "Tenang, Belum ada masalah!", Toast.LENGTH_LONG).show();
+//                    }
                     adapter = new BarangAdapter(barangModelList, getApplicationContext());
                     listView.setAdapter(adapter);
                 } catch (JSONException e) {

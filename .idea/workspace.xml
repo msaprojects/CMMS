@@ -19,7 +19,6 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_firebase_firebase_jobdispatcher_0_5_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_firebase_firebase_jobdispatcher_0_5_2_aar.xml" afterDir="false" />
@@ -31,10 +30,16 @@
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_picasso_picasso_2_71828_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_picasso_picasso_2_71828_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Adapter/TimelineAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Adapter/TimelineAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Util/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Util/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/design_l__timeline2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/design_l__timeline2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Edit/e_Permasalahan.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Edit/e_Permasalahan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/List/L_Barang.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/List/L_Barang.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Tambah/i_Checkout.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Tambah/i_Checkout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Tambah/i_Penyelesaian.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Tambah/i_Penyelesaian.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Tambah/i_Permasalahan.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Tambah/i_Permasalahan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Tambah/i_Progress.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Tambah/i_Progress.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Trigger/MenuPerbaikan.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Trigger/MenuPerbaikan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,7 +51,7 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="Android_Q" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="ANDROID_6" />
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
@@ -68,168 +73,92 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/design_l__timeline2.xml">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/List/L_Timeline2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="255" column="55" selection-start-line="255" selection-start-column="55" selection-end-line="255" selection-end-column="55" />
-              <folding>
-                <element signature="e#632#647#0" expanded="true" />
-                <element signature="e#1571#1589#0" expanded="true" />
-                <element signature="e#1869#1884#0" expanded="true" />
-                <element signature="e#2237#2250#0" expanded="true" />
-                <element signature="e#2488#2506#0" expanded="true" />
-                <element signature="e#2673#2688#0" expanded="true" />
-                <element signature="e#3162#3179#0" expanded="true" />
-                <element signature="e#3417#3435#0" expanded="true" />
-                <element signature="e#3606#3621#0" expanded="true" />
-                <element signature="e#4097#4115#0" expanded="true" />
-                <element signature="e#4353#4371#0" expanded="true" />
-                <element signature="e#4543#4558#0" expanded="true" />
-                <element signature="e#5040#5061#0" expanded="true" />
-                <element signature="e#5299#5317#0" expanded="true" />
-                <element signature="e#5493#5508#0" expanded="true" />
-                <element signature="e#5984#6001#0" expanded="true" />
-                <element signature="e#6239#6257#0" expanded="true" />
-                <element signature="e#6429#6444#0" expanded="true" />
-                <element signature="e#6924#6945#0" expanded="true" />
-                <element signature="e#7183#7201#0" expanded="true" />
-                <element signature="e#7376#7391#0" expanded="true" />
-                <element signature="e#7878#7898#0" expanded="true" />
-                <element signature="e#8136#8154#0" expanded="true" />
-                <element signature="e#8335#8350#0" expanded="true" />
-                <element signature="e#8818#8832#0" expanded="true" />
-                <element signature="e#9070#9088#0" expanded="true" />
-                <element signature="e#9256#9271#0" expanded="true" />
-                <element signature="e#9739#9755#0" expanded="true" />
-                <element signature="e#9993#10011#0" expanded="true" />
-                <element signature="e#10179#10194#0" expanded="true" />
-                <element signature="e#10660#10673#0" expanded="true" />
-                <element signature="e#10911#10929#0" expanded="true" />
-                <element signature="e#11096#11111#0" expanded="true" />
-                <element signature="e#11577#11593#0" expanded="true" />
-                <element signature="e#11828#11846#0" expanded="true" />
-                <element signature="e#12013#12028#0" expanded="true" />
-                <element signature="e#12512#12532#0" expanded="true" />
-                <element signature="e#12770#12788#0" expanded="true" />
-                <element signature="e#12966#12981#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="152">
+              <caret line="114" selection-start-line="114" selection-end-line="114" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Adapter/TimelineAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="576">
+              <caret line="112" column="45" selection-start-line="112" selection-start-column="45" selection-end-line="112" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/design_l__timeline2.xml">
           <provider editor-type-id="android-designer2" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="214">
+              <caret line="229" column="16" selection-start-line="229" selection-start-column="16" selection-end-line="229" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Tambah/i_Penyelesaian.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="236">
+              <caret line="238" column="34" selection-start-line="238" selection-start-column="34" selection-end-line="238" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Tambah/i_Checkout.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="316">
+              <caret line="155" column="34" selection-start-line="155" selection-start-column="34" selection-end-line="155" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Tambah/i_Permasalahan.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="192">
+              <caret line="168" column="19" selection-start-line="162" selection-start-column="12" selection-end-line="168" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Tambah/i_Progress.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="433">
+              <caret line="164" column="13" selection-start-line="164" selection-start-column="13" selection-end-line="164" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Edit/e_Permasalahan.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="165" column="13" lean-forward="true" selection-start-line="165" selection-start-column="13" selection-end-line="165" selection-end-column="13" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Adapter/TimelineAdapter.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/xml/network_permission.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="136" column="42" lean-forward="true" selection-start-line="136" selection-start-column="42" selection-end-line="136" selection-end-column="42" />
+            <state relative-caret-position="112">
+              <caret line="7" column="26" lean-forward="true" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/List/L_Timeline2.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="101" column="13" selection-start-line="101" selection-start-column="13" selection-end-line="101" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Model/TimelineModel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1211#1212#0" expanded="true" />
-                <element signature="e#1238#1239#0" expanded="true" />
-                <element signature="e#1268#1269#0" expanded="true" />
-                <element signature="e#1294#1295#0" expanded="true" />
-                <element signature="e#1328#1329#0" expanded="true" />
-                <element signature="e#1358#1359#0" expanded="true" />
-                <element signature="e#1392#1393#0" expanded="true" />
-                <element signature="e#1422#1423#0" expanded="true" />
-                <element signature="e#1454#1455#0" expanded="true" />
-                <element signature="e#1482#1483#0" expanded="true" />
-                <element signature="e#1518#1519#0" expanded="true" />
-                <element signature="e#1550#1551#0" expanded="true" />
-                <element signature="e#1585#1586#0" expanded="true" />
-                <element signature="e#1616#1617#0" expanded="true" />
-                <element signature="e#1654#1655#0" expanded="true" />
-                <element signature="e#1688#1689#0" expanded="true" />
-                <element signature="e#1724#1725#0" expanded="true" />
-                <element signature="e#1756#1757#0" expanded="true" />
-                <element signature="e#1798#1799#0" expanded="true" />
-                <element signature="e#1836#1837#0" expanded="true" />
-                <element signature="e#1880#1881#0" expanded="true" />
-                <element signature="e#1920#1921#0" expanded="true" />
-                <element signature="e#1951#1952#0" expanded="true" />
-                <element signature="e#1978#1979#0" expanded="true" />
-                <element signature="e#2011#2012#0" expanded="true" />
-                <element signature="e#2040#2041#0" expanded="true" />
-                <element signature="e#2074#2075#0" expanded="true" />
-                <element signature="e#2104#2105#0" expanded="true" />
-                <element signature="e#2134#2135#0" expanded="true" />
-                <element signature="e#2160#2161#0" expanded="true" />
-                <element signature="e#2205#2206#0" expanded="true" />
-                <element signature="e#2246#2247#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="32" column="61" selection-start-line="32" selection-start-column="61" selection-end-line="32" selection-end-column="61" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Util/Server.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Util/JsonResponse.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="705">
-              <caret line="47" column="1" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/List/L_Timeline.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1680">
-              <caret line="165" column="5" selection-start-line="119" selection-start-column="4" selection-end-line="165" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/List/L_Progress.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2355">
-              <caret line="211" column="5" selection-start-line="189" selection-start-column="4" selection-end-line="211" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Adapter/progressAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="52" column="5" selection-start-line="29" selection-start-column="4" selection-end-line="52" selection-end-column="5" />
+            <state relative-caret-position="80">
+              <caret line="5" column="21" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -254,6 +183,7 @@
       <find>object</find>
       <find>has</find>
       <find>16sp</find>
+      <find>eng</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -262,9 +192,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_d__progress.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Util/Config.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Service/MyFirebaseInstanceService.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Service/MyFirebaseMessagingServiceold.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Service/MyFirebaseMessagingService.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Service/MyFirebaseInstanceIdService.java" />
@@ -277,25 +204,19 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Model/CheckoutModel.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/design_l__masalah.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Trigger/convertPerbaikan.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Tambah/i_Checkout.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Tambah/i_Penyelesaian.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Adapter/CheckoutAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Model/MasalahModel.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/design_l__checkout.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/header.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/header.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/bottomnavigation.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Model/DashboardModel.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Adapter/DashboardAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Adapter/BarangAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/xml/network_permission.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Model/MesinModel.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/List/L_Masalah.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/List/L_Barang.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/List/L_Mesin.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/List/L_Progress.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/List/L_Timeline.java" />
@@ -306,21 +227,30 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Adapter/MasalahAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Adapter/CheckoutAdapter2.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/List/L_Timeline2.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Trigger/MenuPerbaikan.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Util/JsonResponse.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Model/TimelineModel.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Util/Server.java" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/design_l__timeline2.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/List/L_Barang.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Trigger/MenuPerbaikan.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Adapter/TimelineAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Tambah/i_Permasalahan.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Tambah/i_Penyelesaian.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Tambah/i_Checkout.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Tambah/i_Progress.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Edit/e_Permasalahan.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/xml/network_permission.xml" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="y" value="23" />
-    <option name="width" value="982" />
-    <option name="height" value="877" />
+    <option name="x" value="240" />
+    <option name="y" value="165" />
+    <option name="width" value="1440" />
+    <option name="height" value="785" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -329,22 +259,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="CMMS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CMMS" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="CMMS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CMMS" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -361,18 +275,113 @@
               <item name="CMMS" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="cmms" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="com" type="cbb59c9e:AndroidPsiDirectoryNode" />
             </path>
             <path>
               <item name="CMMS" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="cmms" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="com" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="msadev" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CMMS" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="com" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="msadev" type="462c0819:PsiDirectoryNode" />
+              <item name="cmms" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CMMS" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="com" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="msadev" type="462c0819:PsiDirectoryNode" />
+              <item name="cmms" type="462c0819:PsiDirectoryNode" />
+              <item name="Adapter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CMMS" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="com" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="msadev" type="462c0819:PsiDirectoryNode" />
+              <item name="cmms" type="462c0819:PsiDirectoryNode" />
+              <item name="Detail" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CMMS" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="com" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="msadev" type="462c0819:PsiDirectoryNode" />
+              <item name="cmms" type="462c0819:PsiDirectoryNode" />
+              <item name="Edit" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CMMS" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="com" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="msadev" type="462c0819:PsiDirectoryNode" />
+              <item name="cmms" type="462c0819:PsiDirectoryNode" />
               <item name="List" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CMMS" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="com" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="msadev" type="462c0819:PsiDirectoryNode" />
+              <item name="cmms" type="462c0819:PsiDirectoryNode" />
+              <item name="Tambah" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CMMS" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="com" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="msadev" type="462c0819:PsiDirectoryNode" />
+              <item name="cmms" type="462c0819:PsiDirectoryNode" />
+              <item name="Trigger" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CMMS" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+            </path>
+            <path>
+              <item name="CMMS" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="values" type="ddeffd01:AndroidResFolderTypeNode" />
+            </path>
+            <path>
+              <item name="CMMS" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="xml" type="ddeffd01:AndroidResFolderTypeNode" />
+            </path>
+            <path>
+              <item name="CMMS" type="1abcf292:AndroidViewProjectNode" />
               <item name="Gradle Scripts" type="ae0cef3a:AndroidBuildScriptsGroupNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="CMMS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CMMS" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="CMMS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CMMS" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -530,11 +539,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="877" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49860334" visible="true" weight="0.2360515" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49860334" visible="true" weight="0.23557048" />
       <window_info id="Structure" order="2" sideWeight="0.50139666" side_tool="true" weight="0.1590604" />
       <window_info id="Build Variants" order="3" sideWeight="0.50139666" side_tool="true" weight="0.1590604" />
       <window_info id="Image Layers" order="4" />
@@ -542,15 +551,15 @@
       <window_info id="Resources Explorer" order="6" />
       <window_info id="Capture Tool" order="7" />
       <window_info id="Favorites" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="0" weight="0.32866243" />
+      <window_info anchor="bottom" id="Run" order="0" sideWeight="0.49395972" weight="0.3282123" />
       <window_info anchor="bottom" id="Logcat" order="1" weight="0.32866243" />
       <window_info anchor="bottom" id="TODO" order="2" weight="0.32960895" />
       <window_info anchor="bottom" id="Android Profiler" order="3" />
       <window_info anchor="bottom" id="Debug" order="4" />
       <window_info anchor="bottom" id="Terminal" order="5" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="6" side_tool="true" visible="true" weight="0.32866243" />
+      <window_info anchor="bottom" id="Event Log" order="6" sideWeight="0.5060403" side_tool="true" weight="0.3282123" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Build" order="8" weight="0.2624204" />
+      <window_info anchor="bottom" id="Build" order="8" sideWeight="0.49798658" weight="0.2611732" />
       <window_info anchor="bottom" id="Find" order="9" weight="0.32960895" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
@@ -560,7 +569,7 @@
       <window_info anchor="right" id="Flutter Outline" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Flutter Performance" order="7" />
-      <window_info anchor="right" id="Preview" order="8" weight="0.29399142" />
+      <window_info anchor="right" id="Preview" order="8" weight="0.29395974" />
       <window_info anchor="right" id="Assistant" order="9" visible="true" weight="0.3295302" />
     </layout>
     <layout-to-restore>
@@ -595,82 +604,22 @@
     </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Model/BarangModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_i__checkout.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2144">
-          <caret line="134" column="51" selection-start-line="127" selection-start-column="8" selection-end-line="134" selection-end-column="51" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Tambah/i_Progress.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1904">
-          <caret line="156" column="9" selection-start-line="136" selection-start-column="8" selection-end-line="156" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Trigger/convertPerbaikan.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="592">
-          <caret line="67" column="21" selection-start-line="64" selection-start-column="12" selection-end-line="67" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Edit/e_Permasalahan.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1664">
-          <caret line="150" column="53" selection-start-line="150" selection-start-column="53" selection-end-line="150" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Model/CheckoutModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#787#788#0" expanded="true" />
-            <element signature="e#832#833#0" expanded="true" />
-            <element signature="e#1203#1204#0" expanded="true" />
-            <element signature="e#1236#1237#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/AppData/Local/Android/Sdk/platforms/android-29/android.jar!/android/widget/ArrayAdapter.class" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Tambah/i_Checkout.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="54" column="22" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_i__penyelesaian.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1984">
           <caret line="124" column="19" selection-start-line="7" selection-start-column="4" selection-end-line="124" selection-end-column="19" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/listview.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Model/MasalahModel.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -712,13 +661,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Tambah/i_Penyelesaian.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1440">
-          <caret line="147" column="8" selection-start-line="147" selection-start-column="8" selection-end-line="147" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Adapter/CheckoutAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="960">
@@ -727,44 +669,37 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/actionsearch.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/design_l__checkout.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="448">
           <caret line="28" column="60" selection-start-line="23" selection-start-column="12" selection-end-line="28" selection-end-column="60" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/header.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="26" column="23" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
           <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/header.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
           <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/font_certs.xml">
       <provider selected="true" editor-type-id="text-editor" />
@@ -777,24 +712,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/bottomnavigation.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
           <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="34" column="51" selection-start-line="34" selection-start-column="51" selection-end-line="34" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/xml/network_permission.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -834,27 +755,20 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="48" column="19" selection-start-line="48" selection-start-column="19" selection-end-line="48" selection-end-column="19" />
         </state>
       </provider>
-      <provider editor-type-id="android-manifest" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Adapter/BarangAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="27" column="38" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_l__timeline.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2336">
           <caret line="146" column="25" selection-start-line="146" selection-start-column="25" selection-end-line="146" selection-end-column="25" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/List/L_Masalah.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -881,12 +795,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/design_l__masalah.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1952">
           <caret line="122" column="12" selection-start-line="122" selection-start-column="12" selection-end-line="122" selection-end-column="12" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Adapter/CheckoutAdapter2.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -906,79 +820,16 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/design_l__progress.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
           <caret line="6" column="40" selection-start-line="6" selection-start-column="40" selection-end-line="8" selection-end-column="25" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Trigger/MenuPerbaikan.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1365">
-          <caret line="127" column="72" selection-start-line="127" selection-start-column="72" selection-end-line="127" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/List/L_Barang.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="66" column="51" selection-start-line="66" selection-start-column="51" selection-end-line="66" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Util/JsonResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="47" column="1" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/List/L_Timeline.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1680">
-          <caret line="165" column="5" selection-start-line="119" selection-start-column="4" selection-end-line="165" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/List/L_Progress.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2355">
-          <caret line="211" column="5" selection-start-line="189" selection-start-column="4" selection-end-line="211" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Adapter/progressAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="52" column="5" selection-start-line="29" selection-start-column="4" selection-end-line="52" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="32" column="61" selection-start-line="32" selection-start-column="61" selection-end-line="32" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/List/L_Timeline2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="101" column="13" selection-start-line="101" selection-start-column="13" selection-end-line="101" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Util/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Model/TimelineModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
+        <state relative-caret-position="352">
           <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1018,59 +869,172 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/design_l__timeline2.xml">
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="255" column="55" selection-start-line="255" selection-start-column="55" selection-end-line="255" selection-end-column="55" />
+        <state relative-caret-position="512">
+          <caret line="32" column="61" selection-start-line="32" selection-start-column="61" selection-end-line="32" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/List/L_Timeline.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1792">
+          <caret line="165" column="5" selection-start-line="119" selection-start-column="4" selection-end-line="165" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/List/L_Progress.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2512">
+          <caret line="211" column="5" selection-start-line="189" selection-start-column="4" selection-end-line="211" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Adapter/progressAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="52" column="5" selection-start-line="29" selection-start-column="4" selection-end-line="52" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Adapter/BarangAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="27" column="38" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Model/BarangModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Model/CheckoutModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding>
-            <element signature="e#632#647#0" expanded="true" />
-            <element signature="e#1571#1589#0" expanded="true" />
-            <element signature="e#1869#1884#0" expanded="true" />
-            <element signature="e#2237#2250#0" expanded="true" />
-            <element signature="e#2488#2506#0" expanded="true" />
-            <element signature="e#2673#2688#0" expanded="true" />
-            <element signature="e#3162#3179#0" expanded="true" />
-            <element signature="e#3417#3435#0" expanded="true" />
-            <element signature="e#3606#3621#0" expanded="true" />
-            <element signature="e#4097#4115#0" expanded="true" />
-            <element signature="e#4353#4371#0" expanded="true" />
-            <element signature="e#4543#4558#0" expanded="true" />
-            <element signature="e#5040#5061#0" expanded="true" />
-            <element signature="e#5299#5317#0" expanded="true" />
-            <element signature="e#5493#5508#0" expanded="true" />
-            <element signature="e#5984#6001#0" expanded="true" />
-            <element signature="e#6239#6257#0" expanded="true" />
-            <element signature="e#6429#6444#0" expanded="true" />
-            <element signature="e#6924#6945#0" expanded="true" />
-            <element signature="e#7183#7201#0" expanded="true" />
-            <element signature="e#7376#7391#0" expanded="true" />
-            <element signature="e#7878#7898#0" expanded="true" />
-            <element signature="e#8136#8154#0" expanded="true" />
-            <element signature="e#8335#8350#0" expanded="true" />
-            <element signature="e#8818#8832#0" expanded="true" />
-            <element signature="e#9070#9088#0" expanded="true" />
-            <element signature="e#9256#9271#0" expanded="true" />
-            <element signature="e#9739#9755#0" expanded="true" />
-            <element signature="e#9993#10011#0" expanded="true" />
-            <element signature="e#10179#10194#0" expanded="true" />
-            <element signature="e#10660#10673#0" expanded="true" />
-            <element signature="e#10911#10929#0" expanded="true" />
-            <element signature="e#11096#11111#0" expanded="true" />
-            <element signature="e#11577#11593#0" expanded="true" />
-            <element signature="e#11828#11846#0" expanded="true" />
-            <element signature="e#12013#12028#0" expanded="true" />
-            <element signature="e#12512#12532#0" expanded="true" />
-            <element signature="e#12770#12788#0" expanded="true" />
-            <element signature="e#12966#12981#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#787#788#0" expanded="true" />
+            <element signature="e#832#833#0" expanded="true" />
+            <element signature="e#1203#1204#0" expanded="true" />
+            <element signature="e#1236#1237#0" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.volley/volley/1.1.0/65ed7df4af0e83a626f383ff49c3403342659aa9/volley-1.1.0-sources.jar!/com/android/volley/toolbox/StringRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="912">
+          <caret line="77" selection-start-line="77" selection-end-line="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Util/JsonResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="3" column="31" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Util/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/List/L_Barang.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="151" column="58" selection-start-line="151" selection-start-column="58" selection-end-line="151" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Trigger/MenuPerbaikan.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="55" column="37" selection-start-line="55" selection-start-column="37" selection-end-line="55" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/List/L_Timeline2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="114" selection-start-line="114" selection-end-line="114" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/design_l__timeline2.xml">
       <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="229" column="16" selection-start-line="229" selection-start-column="16" selection-end-line="229" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="5" column="21" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="21" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Adapter/TimelineAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="136" column="42" lean-forward="true" selection-start-line="136" selection-start-column="42" selection-end-line="136" selection-end-column="42" />
+        <state relative-caret-position="576">
+          <caret line="112" column="45" selection-start-line="112" selection-start-column="45" selection-end-line="112" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Tambah/i_Penyelesaian.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="238" column="34" selection-start-line="238" selection-start-column="34" selection-end-line="238" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Tambah/i_Checkout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="155" column="34" selection-start-line="155" selection-start-column="34" selection-end-line="155" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Tambah/i_Progress.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="433">
+          <caret line="164" column="13" selection-start-line="164" selection-start-column="13" selection-end-line="164" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Tambah/i_Permasalahan.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="168" column="19" selection-start-line="162" selection-start-column="12" selection-end-line="168" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/msadev/cmms/Edit/e_Permasalahan.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="165" column="13" lean-forward="true" selection-start-line="165" selection-start-column="13" selection-end-line="165" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/xml/network_permission.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="7" column="26" lean-forward="true" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
         </state>
       </provider>
     </entry>

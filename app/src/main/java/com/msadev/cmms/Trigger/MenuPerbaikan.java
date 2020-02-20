@@ -53,7 +53,7 @@ public class MenuPerbaikan extends AppCompatActivity {
         setContentView(R.layout.listview);
 
         mm = getIntent().getParcelableExtra(DATAMASALAH);
-        idmasalah = mm.getIdmesin();
+        idmasalah = mm.getIdmasalah();
         this.setTitle("Action masalah Mesin "+mm.getNomesin());
 
 
