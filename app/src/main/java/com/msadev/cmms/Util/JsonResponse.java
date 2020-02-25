@@ -39,6 +39,7 @@ public class JsonResponse {
     public static final String DATAMASALAH = "DATAMASALAH";
     public static final String DATABARANG = "DATABARANG";
     public static final String DATAPROGRESS = "DATAPROGRESS";
+    public static final String DATAPILIHAN = "DATAPILIHAN";
 
     public static final String MENUPERBAIKAN = "MENUPERBAIKAN";
 

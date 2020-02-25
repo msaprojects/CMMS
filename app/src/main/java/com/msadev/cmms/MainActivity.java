@@ -16,6 +16,8 @@ import com.google.android.material.navigation.NavigationView;
 import com.msadev.cmms.List.L_Masalah;
 import com.msadev.cmms.List.L_Mesin;
 
+import static com.msadev.cmms.Util.JsonResponse.DATAPILIHAN;
+
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     DrawerLayout drawer;
@@ -56,8 +58,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
+            case R.id.Mesin:
+                Intent i = new Intent(getApplicationContext(), L_Mesin.class);
+                i.putExtra(DATAPILIHAN, "From_Menu");
+                startActivity(i);
+                finish();
             case R.id.AddMasalah:
-                Intent i = new Intent(MainActivity.this, L_Mesin.class);
+                i = new Intent(MainActivity.this, L_Mesin.class);
                 startActivity(i);
                 finish();
                 break;
@@ -66,6 +73,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(i);
                 finish();
                 break;
+            case R.id.penggantian:
+                i = new Intent(MainActivity.this, L_Mesin.class);
+//                i.putExtra(DATAPILIHAN, "From_Menu");
+                startActivity(i);
+                finish();
         }
         return false;
     }

@@ -38,6 +38,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static com.msadev.cmms.Util.JsonResponse.DATAMESIN;
+import static com.msadev.cmms.Util.JsonResponse.DATAPILIHAN;
 import static com.msadev.cmms.Util.JsonResponse.JRES_IDMESIN;
 import static com.msadev.cmms.Util.JsonResponse.JRES_KETERANGAN;
 import static com.msadev.cmms.Util.JsonResponse.JRES_NOMESIN;
@@ -63,6 +64,9 @@ public class L_Mesin extends AppCompatActivity implements ListView.OnScrollListe
         setContentView(R.layout.listview);
         this.setTitle("Pilih Mesin");
 
+        Intent i = getIntent();
+        final String values = i.getStringExtra(DATAPILIHAN);
+        Toast.makeText(getApplicationContext(), values, Toast.LENGTH_LONG).show();
 
         listView = (ListView) findViewById(R.id.listview);
         fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -90,9 +94,15 @@ public class L_Mesin extends AppCompatActivity implements ListView.OnScrollListe
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
                 MesinModel mesinModel = mesinModelList.get(position);
-                Intent i = new Intent(getApplicationContext(), i_Permasalahan.class );
-                i.putExtra(DATAMESIN, mesinModel);
-                startActivity(i);
+//                if (values.equals("From_Menu")) {
+//                    Intent i = new Intent(getApplicationContext(), i_Permasalahan.class);
+//                    i.putExtra(DATAMESIN, mesinModel);
+//                    startActivity(i);
+//                }else{
+//                    Intent i = new Intent(getApplicationContext(), i_Permasalahan.class);
+//                    i.putExtra(DATAMESIN, mesinModel);
+//                    startActivity(i);
+//                }
             }
         });
         listView.setOnScrollListener((AbsListView.OnScrollListener) this);

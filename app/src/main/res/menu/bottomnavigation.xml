@@ -2,14 +2,19 @@
 <menu
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/Home"
+        android:iconTint="@color/red"
+        android:icon="@drawable/ic_home"
+        android:title="Dashboard"/>
     <group android:checkableBehavior="single">
-        <item android:title="Dashboard">
+        <item android:title="Master">
             <menu>
                 <item
-                    android:id="@+id/Home"
+                    android:id="@+id/Mesin"
                     android:iconTint="@color/red"
-                    android:icon="@drawable/ic_home"
-                    android:title="Home"/>
+                    android:icon="@drawable/ic_component"
+                    android:title="Mesin"/>
             </menu>
         </item>
     </group>
@@ -27,6 +32,11 @@
                     android:id="@+id/Masalah"
                     android:icon="@drawable/ic_close"
                     android:title="@string/masalah"/>
+                <item
+                    android:iconTint="@color/red"
+                    android:id="@+id/penggantian"
+                    android:icon="@drawable/ic_inclusive"
+                    android:title="@string/jadwal_penggantian"/>
             </menu>
         </item>
     </group>
