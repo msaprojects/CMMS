@@ -29,4 +29,6 @@
     <string name="progres">Progres</string>
     <string name="tgl_selesai">Tgl Selesai</string>
     <string name="jadwal_penggantian">Jadwal Penggantian</string>
+    <string name="nama_komponen">Nama Komponen</string>
+    <string name="jumlah_komponen">Jumlah Komponen</string>
 </resources>

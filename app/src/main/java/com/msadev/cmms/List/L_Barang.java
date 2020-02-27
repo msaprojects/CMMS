@@ -202,4 +202,12 @@ public class L_Barang extends AppCompatActivity implements ListView.OnScrollList
             }
         }
     }
+    @Override
+    public void onBackPressed(){
+        super.onBackPressed();
+        Intent i=new Intent(Intent.ACTION_MAIN);
+        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        finish();
+    }
 }

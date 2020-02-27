@@ -11,6 +11,7 @@ public class JsonResponse {
     public static final String JRES_IDPENGGUNA = "idpengguna";
     public static final String JRES_IDCHECKOUT = "idcheckout";
     public static final String JRES_IDPENYELESAIAN = "idpenyelesaian";
+    public static final String JRES_IDKOMPONEN = "idkomponen";
 
     public static final String JRES_NOMESIN = "nomesin";
     public static final String JRES_SITE = "site";
@@ -29,6 +30,7 @@ public class JsonResponse {
     public static final String JRES_QTY = "qty";
     public static final String JRES_BARANG = "barang";
     public static final String JRES_TIPE = "tipe";
+    public static final String JRES_JUMLAH = "jumlah";
     public static final String JRES_TANGGALPROG = "tanggalprog";
     public static final String JRES_SHIFTPROG = "shiftprog";
     public static final String JRES_TANGGALSELESAI = "tanggalselesai";
@@ -40,6 +42,7 @@ public class JsonResponse {
     public static final String DATABARANG = "DATABARANG";
     public static final String DATAPROGRESS = "DATAPROGRESS";
     public static final String DATAPILIHAN = "DATAPILIHAN";
+    public static final String DATAKOMPONEN = "DATAKOMPONEN";
 
     public static final String MENUPERBAIKAN = "MENUPERBAIKAN";
 

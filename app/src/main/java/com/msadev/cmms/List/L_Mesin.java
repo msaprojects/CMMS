@@ -29,6 +29,7 @@ import com.msadev.cmms.MainActivity;
 import com.msadev.cmms.Model.MesinModel;
 import com.msadev.cmms.R;
 import com.msadev.cmms.Tambah.i_Permasalahan;
+import com.msadev.cmms.Trigger.MenuMesin;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -57,6 +58,7 @@ public class L_Mesin extends AppCompatActivity implements ListView.OnScrollListe
     Menu menu;
     MesinAdapter adapter;
     private int preLast;
+    String values;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,7 +67,7 @@ public class L_Mesin extends AppCompatActivity implements ListView.OnScrollListe
         this.setTitle("Pilih Mesin");
 
         Intent i = getIntent();
-        final String values = i.getStringExtra(DATAPILIHAN);
+        values = i.getStringExtra(DATAPILIHAN);
         Toast.makeText(getApplicationContext(), values, Toast.LENGTH_LONG).show();
 
         listView = (ListView) findViewById(R.id.listview);
@@ -94,15 +96,15 @@ public class L_Mesin extends AppCompatActivity implements ListView.OnScrollListe
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
                 MesinModel mesinModel = mesinModelList.get(position);
-//                if (values.equals("From_Menu")) {
-//                    Intent i = new Intent(getApplicationContext(), i_Permasalahan.class);
-//                    i.putExtra(DATAMESIN, mesinModel);
-//                    startActivity(i);
-//                }else{
-//                    Intent i = new Intent(getApplicationContext(), i_Permasalahan.class);
-//                    i.putExtra(DATAMESIN, mesinModel);
-//                    startActivity(i);
-//                }
+                if (values.equals("From_Menu")) {
+                    Intent i = new Intent(getApplicationContext(), MenuMesin.class);
+                    i.putExtra(DATAMESIN, mesinModel);
+                    startActivity(i);
+                }else{
+                    Intent i = new Intent(getApplicationContext(), i_Permasalahan.class);
+                    i.putExtra(DATAMESIN, mesinModel);
+                    startActivity(i);
+                }
             }
         });
         listView.setOnScrollListener((AbsListView.OnScrollListener) this);

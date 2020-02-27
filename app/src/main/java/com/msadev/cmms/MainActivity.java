@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     NavigationView navigationView;
     Toolbar toolbar;
     TextView tvJMasalah, tvJSelesai;
+    Intent i;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,7 +60,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
             case R.id.Mesin:
-                Intent i = new Intent(getApplicationContext(), L_Mesin.class);
+                i = new Intent(MainActivity.this, L_Mesin.class);
                 i.putExtra(DATAPILIHAN, "From_Menu");
                 startActivity(i);
                 finish();
@@ -75,7 +76,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
             case R.id.penggantian:
                 i = new Intent(MainActivity.this, L_Mesin.class);
-//                i.putExtra(DATAPILIHAN, "From_Menu");
+                i.putExtra(DATAPILIHAN, "From_Menu");
                 startActivity(i);
                 finish();
         }

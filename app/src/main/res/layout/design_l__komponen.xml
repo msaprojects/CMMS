@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:padding="15dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".List.L_Komponen">
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nama_komponen"
+                app:fontFamily="@font/roboto_mono_medium" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/titikdua"
+                app:fontFamily="@font/roboto_mono_medium" />
+            <TextView
+                android:id="@+id/tvNamaKomponen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/value"
+                app:fontFamily="@font/roboto_mono_medium" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/jumlah_komponen"
+                app:fontFamily="@font/roboto_mono_medium" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/titikdua"
+                app:fontFamily="@font/roboto_mono_medium" />
+            <TextView
+                android:id="@+id/tvJumlahKomponen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/value"
+                app:fontFamily="@font/roboto_mono_medium" />
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

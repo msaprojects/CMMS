@@ -11,11 +11,14 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.msadev.cmms.List.L_Komponen;
 import com.msadev.cmms.List.L_Mesin;
 import com.msadev.cmms.Model.MesinModel;
 import com.msadev.cmms.R;
+import com.msadev.cmms.Tambah.i_Komponen;
 
 import static com.msadev.cmms.Util.JsonResponse.DATAMASALAH;
+import static com.msadev.cmms.Util.JsonResponse.DATAMESIN;
 
 public class MenuMesin extends AppCompatActivity {
     ListView listView;
@@ -31,7 +34,7 @@ public class MenuMesin extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.listview);
 
-        mm = getIntent().getParcelableExtra(DATAMASALAH);
+        mm = getIntent().getParcelableExtra(DATAMESIN);
         idmesin = mm.getIdmesin();
         this.setTitle("Action Mesin "+mm.getNomesin());
 
@@ -53,13 +56,13 @@ public class MenuMesin extends AppCompatActivity {
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
             String itemView = (String) listView.getItemAtPosition(position);
             if(itemView.equals("Tambah Komponen Mesin")) {
-                intent = new Intent(getApplicationContext(), L_Mesin.class);
-                intent.putExtra(DATAMASALAH, mm);
+                intent = new Intent(getApplicationContext(), i_Komponen.class);
+                intent.putExtra(DATAMESIN, mm);
                 startActivity(intent);
                 finish();
             }else if(itemView.equals("List Komponen Mesin")) {
-                intent = new Intent(getApplicationContext(), L_Mesin.class);
-                intent.putExtra(DATAMASALAH, mm);
+                intent = new Intent(getApplicationContext(), L_Komponen.class);
+                intent.putExtra(DATAMESIN, mm);
                 startActivity(intent);
                 finish();
             } else {

@@ -14,7 +14,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".List.L_Timeline2"></activity>
+        <activity android:name=".List.L_Komponen"></activity>
+        <activity android:name=".Detail.d_Komponen" />
+        <activity android:name=".Trigger.MenuMesin" />
+        <activity android:name=".Tambah.i_Komponen" />
+        <activity android:name=".List.L_Timeline2" />
         <activity
             android:name=".List.L_Timeline"
             android:screenOrientation="portrait" />

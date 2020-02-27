@@ -2,6 +2,7 @@ package com.msadev.cmms.Detail;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -38,6 +39,13 @@ public class d_Progress extends AppCompatActivity {
         tvshift.setText(pm.getShift());
         tvMasalah.setText(pm.getMasalah());
         tvperbaikan.setText(pm.getPerbaikan());
-
+    }
+    @Override
+    public void onBackPressed(){
+        super.onBackPressed();
+        Intent i=new Intent(Intent.ACTION_MAIN);
+        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        finish();
     }
 }
