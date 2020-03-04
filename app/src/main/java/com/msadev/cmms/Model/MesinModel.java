@@ -5,21 +5,18 @@ import android.os.Parcelable;
 
 public class MesinModel implements Parcelable {
 
-    String idmesin, nomesin, site, keterangan;
+    String idmesin, nomesin, site, keterangan, idsite;
 
-    public MesinModel(String idmesin, String nomesin, String site, String keterangan) {
+    public MesinModel(String idmesin, String nomesin, String site, String keterangan, String idsite) {
         this.idmesin = idmesin;
         this.nomesin = nomesin;
         this.site = site;
         this.keterangan = keterangan;
+        this.idsite = idsite;
     }
 
     public String getIdmesin() {
         return idmesin;
-    }
-
-    public String getAll(){
-        return nomesin+site+keterangan;
     }
 
     public String getNomesin() {
@@ -34,11 +31,16 @@ public class MesinModel implements Parcelable {
         return keterangan;
     }
 
+    public String getIdsite() {
+        return idsite;
+    }
+
     protected MesinModel(Parcel in) {
         idmesin = in.readString();
         nomesin = in.readString();
         site = in.readString();
         keterangan = in.readString();
+        idsite = in.readString();
     }
 
     @Override
@@ -47,6 +49,7 @@ public class MesinModel implements Parcelable {
         dest.writeString(nomesin);
         dest.writeString(site);
         dest.writeString(keterangan);
+        dest.writeString(idsite);
     }
 
     @Override
@@ -65,4 +68,9 @@ public class MesinModel implements Parcelable {
             return new MesinModel[size];
         }
     };
-}
+
+    public String getAll(){
+        return nomesin+site+keterangan;
+    }
+
+   }

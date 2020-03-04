@@ -3,6 +3,7 @@ package com.msadev.cmms.Util;
 public class JsonResponse {
     public static final String TAG_RESULT = "data";
 
+    public static final String JRES_IDSITE = "idsite";
     public static final String JRES_IDMESIN = "idmesin";
     public static final String JRES_IDBARANG = "idbarang";
     public static final String JRES_IDSATUAN= "idsatuan";
@@ -31,6 +32,7 @@ public class JsonResponse {
     public static final String JRES_BARANG = "barang";
     public static final String JRES_TIPE = "tipe";
     public static final String JRES_JUMLAH = "jumlah";
+    public static final String JRES_KOMPONEN = "komponen";
     public static final String JRES_TANGGALPROG = "tanggalprog";
     public static final String JRES_SHIFTPROG = "shiftprog";
     public static final String JRES_TANGGALSELESAI = "tanggalselesai";
@@ -43,6 +45,7 @@ public class JsonResponse {
     public static final String DATAPROGRESS = "DATAPROGRESS";
     public static final String DATAPILIHAN = "DATAPILIHAN";
     public static final String DATAKOMPONEN = "DATAKOMPONEN";
+    public static final String DATASITE = "DATASITE";
 
     public static final String MENUPERBAIKAN = "MENUPERBAIKAN";
 

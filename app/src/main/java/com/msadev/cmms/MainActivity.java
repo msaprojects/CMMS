@@ -15,6 +15,8 @@ import android.widget.Toolbar;
 import com.google.android.material.navigation.NavigationView;
 import com.msadev.cmms.List.L_Masalah;
 import com.msadev.cmms.List.L_Mesin;
+import com.msadev.cmms.List.L_Reminder;
+import com.msadev.cmms.List.L_Site;
 
 import static com.msadev.cmms.Util.JsonResponse.DATAPILIHAN;
 
@@ -64,8 +66,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 i.putExtra(DATAPILIHAN, "From_Menu");
                 startActivity(i);
                 finish();
+                break;
+            case R.id.addMesin:
+                i = new Intent(MainActivity.this, L_Site.class);
+//                i.putExtra(DATAPILIHAN, "");
+                startActivity(i);
+                finish();
+                break;
             case R.id.AddMasalah:
                 i = new Intent(MainActivity.this, L_Mesin.class);
+                i.putExtra(DATAPILIHAN, "");
                 startActivity(i);
                 finish();
                 break;
@@ -74,11 +84,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(i);
                 finish();
                 break;
-            case R.id.penggantian:
-                i = new Intent(MainActivity.this, L_Mesin.class);
-                i.putExtra(DATAPILIHAN, "From_Menu");
+            case R.id.reminder:
+                i = new Intent(MainActivity.this, L_Reminder.class);
                 startActivity(i);
                 finish();
+                break;
         }
         return false;
     }

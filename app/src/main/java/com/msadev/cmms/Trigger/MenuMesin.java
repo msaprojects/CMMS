@@ -11,6 +11,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.msadev.cmms.Edit.e_Mesin;
 import com.msadev.cmms.List.L_Komponen;
 import com.msadev.cmms.List.L_Mesin;
 import com.msadev.cmms.Model.MesinModel;
@@ -44,7 +45,7 @@ public class MenuMesin extends AppCompatActivity {
         fab.hide();
 
         String menu[] = {
-                "Tambah Komponen Mesin", "List Komponen Mesin"
+                "Edit Mesin", "Tambah Komponen Mesin", "List Komponen Mesin"
         };
         adapter = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_expandable_list_item_1, menu);
         listView.setAdapter(adapter);
@@ -65,7 +66,12 @@ public class MenuMesin extends AppCompatActivity {
                 intent.putExtra(DATAMESIN, mm);
                 startActivity(intent);
                 finish();
-            } else {
+            }else if (itemView.equals("Edit Mesin")) {
+                intent = new Intent(getApplicationContext(), e_Mesin.class);
+                intent.putExtra(DATAMESIN, mm);
+                startActivity(intent);
+                finish();
+            }else {
                 Toast.makeText(MenuMesin.this, "Menu Yang anda pilih tidak sesuai!", Toast.LENGTH_SHORT).show();
             }
         }

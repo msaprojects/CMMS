@@ -41,6 +41,7 @@ import java.util.List;
 import static com.msadev.cmms.Util.JsonResponse.DATAMESIN;
 import static com.msadev.cmms.Util.JsonResponse.DATAPILIHAN;
 import static com.msadev.cmms.Util.JsonResponse.JRES_IDMESIN;
+import static com.msadev.cmms.Util.JsonResponse.JRES_IDSITE;
 import static com.msadev.cmms.Util.JsonResponse.JRES_KETERANGAN;
 import static com.msadev.cmms.Util.JsonResponse.JRES_NOMESIN;
 import static com.msadev.cmms.Util.JsonResponse.JRES_SITE;
@@ -58,7 +59,7 @@ public class L_Mesin extends AppCompatActivity implements ListView.OnScrollListe
     Menu menu;
     MesinAdapter adapter;
     private int preLast;
-    String values;
+    String values="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,7 +69,6 @@ public class L_Mesin extends AppCompatActivity implements ListView.OnScrollListe
 
         Intent i = getIntent();
         values = i.getStringExtra(DATAPILIHAN);
-        Toast.makeText(getApplicationContext(), values, Toast.LENGTH_LONG).show();
 
         listView = (ListView) findViewById(R.id.listview);
         fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -152,7 +152,8 @@ public class L_Mesin extends AppCompatActivity implements ListView.OnScrollListe
                                     object.getString(JRES_IDMESIN),
                                     object.getString(JRES_NOMESIN),
                                     object.getString(JRES_SITE),
-                                    object.getString(JRES_KETERANGAN)
+                                    object.getString(JRES_KETERANGAN),
+                                    object.getString(JRES_IDSITE)
                             );
                             mesinModelList.add(mesinModel);
                         }

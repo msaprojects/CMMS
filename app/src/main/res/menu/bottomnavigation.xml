@@ -7,17 +7,22 @@
         android:iconTint="@color/red"
         android:icon="@drawable/ic_home"
         android:title="Dashboard"/>
-<!--    <group android:checkableBehavior="single">-->
-<!--        <item android:title="Master">-->
-<!--            <menu>-->
-<!--                <item-->
-<!--                    android:id="@+id/Mesin"-->
-<!--                    android:iconTint="@color/red"-->
-<!--                    android:icon="@drawable/ic_component"-->
-<!--                    android:title="Mesin"/>-->
-<!--            </menu>-->
-<!--        </item>-->
-<!--    </group>-->
+    <group android:checkableBehavior="single">
+        <item android:title="Master">
+            <menu>
+                <item
+                    android:iconTint="@color/red"
+                    android:id="@+id/addMesin"
+                    android:icon="@drawable/ic_add"
+                    android:title="Tambah Mesin"/>
+                <item
+                    android:id="@+id/Mesin"
+                    android:iconTint="@color/red"
+                    android:icon="@drawable/ic_component"
+                    android:title="Mesin"/>
+            </menu>
+        </item>
+    </group>
     <group android:checkableBehavior="single">
         <item
             android:title="Transaksi">
@@ -34,9 +39,9 @@
                     android:title="@string/masalah"/>
                 <item
                     android:iconTint="@color/red"
-                    android:id="@+id/penggantian"
+                    android:id="@+id/reminder"
                     android:icon="@drawable/ic_inclusive"
-                    android:title="List Komponen Mesin"/>
+                    android:title="Jadwal Penggantian"/>
             </menu>
         </item>
     </group>

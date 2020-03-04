@@ -59,5 +59,4 @@ public class MesinAdapter extends ArrayAdapter<MesinModel> {
         }
         notifyDataSetChanged();
     }
-
 }

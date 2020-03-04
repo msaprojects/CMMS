@@ -14,7 +14,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".List.L_Komponen"></activity>
+        <activity android:name=".Edit.e_Mesin"/>
+        <activity android:name=".Tambah.i_Mesin"></activity>
+        <activity android:name=".List.L_Site" />
+        <activity android:name=".List.L_Reminder" />
+        <activity android:name=".List.L_Komponen" />
         <activity android:name=".Detail.d_Komponen" />
         <activity android:name=".Trigger.MenuMesin" />
         <activity android:name=".Tambah.i_Komponen" />
