@@ -54,7 +54,7 @@ public class e_Mesin extends AppCompatActivity implements View.OnClickListener{
         etKeterangan=findViewById(R.id.etKeterangan);
         tvSite=findViewById(R.id.tvSite);
 
-        etNoMesin.setText(idsite);
+        etNoMesin.setText(mm.getNomesin());
         etKeterangan.setText(mm.getKeterangan());
         tvSite.setText(mm.getSite());
 
