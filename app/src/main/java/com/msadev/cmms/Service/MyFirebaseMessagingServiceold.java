@@ -51,23 +51,24 @@ public class MyFirebaseMessagingServiceold extends FirebaseMessagingService {
     public void onMessageReceived(RemoteMessage remoteMessage) {
 
         Log.d(TAG, "From: " + remoteMessage.getFrom());
-        String title="";
-        String body="";
 
+        String title = remoteMessage.getNotification().getTitle();
+        String body= remoteMessage.getNotification().getBody();
+        Log.d("Hasil Notif", title+" - "+body);
 
-        if (remoteMessage.getData().size() > 0) {
-            Log.d(TAG, "Message data payload: " + remoteMessage.getData());
-            title = remoteMessage.getData().get("title");
-            body = remoteMessage.getData().get("message");
-            sendNotification(title, body);
-
+//        if (remoteMessage.getNotification().getTitle().size() > 0) {
+//            Log.d(TAG, "Message data payload: " + remoteMessage.getData());
+//            title = remoteMessage.getData().get("title");
+//            body = remoteMessage.getData().get("message");
+//            sendNotification(title, body);
+//
             if (true) {
                 scheduleJob();
             } else {
                 handleNow();
             }
-
-        }
+//
+//        }
     }
     @Override
     public void onNewToken(String token) {
