@@ -25,53 +25,52 @@
         <activity android:name=".List.L_Timeline2" />
         <activity
             android:name=".List.L_Timeline"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".Tambah.i_Checkout"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".Tambah.i_Penyelesaian"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".List.L_Barang"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".Detail.d_Progress"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".Edit.e_Permasalahan"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".List.L_Progress"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".Tambah.i_Progress"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".List.L_Mesin"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".Trigger.convertPerbaikan"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".Trigger.MenuPerbaikan"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".Tambah.i_Permasalahan"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".List.L_Masalah"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".MainActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="fullSensor">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <service android:name=".Service.MyFirebaseMessagingServiceold">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
@@ -82,7 +81,6 @@
                 <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE" />
             </intent-filter>
         </service>
-
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
