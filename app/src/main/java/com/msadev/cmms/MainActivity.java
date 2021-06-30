@@ -17,18 +17,36 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.Toolbar;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.InstanceIdResult;
 import com.google.firebase.messaging.FirebaseMessaging;
+import com.msadev.cmms.Adapter.KomponenAdapter;
 import com.msadev.cmms.List.L_Masalah;
 import com.msadev.cmms.List.L_Mesin;
 import com.msadev.cmms.List.L_Reminder;
 import com.msadev.cmms.List.L_Site;
+import com.msadev.cmms.Model.KomponenModel;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import static com.msadev.cmms.Util.JsonResponse.DATAPILIHAN;
+import static com.msadev.cmms.Util.JsonResponse.JRES_IDKOMPONEN;
+import static com.msadev.cmms.Util.JsonResponse.JRES_IDMESIN;
+import static com.msadev.cmms.Util.JsonResponse.JRES_JUMLAH;
+import static com.msadev.cmms.Util.JsonResponse.JRES_NAMA;
+import static com.msadev.cmms.Util.JsonResponse.TAG_RESULT;
+import static com.msadev.cmms.Util.Server.IPADDRESS;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -51,6 +69,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         navigationView = findViewById(R.id.nav);
         tvJMasalah = findViewById(R.id.tvJMasalah);
         tvJSelesai = findViewById(R.id.tvJSelesai);
+        loaddata();
 //        toolbar = findViewById(R.id.toolbar);
 //        setSupportActionBar(toolbar);
 //        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawer,toolbar,R.string.buka,R.string.tutup);
@@ -105,6 +124,44 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
         });
 
+    }
+
+    public void loaddata(){
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, IPADDRESS + "/dashboard", new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                try {
+                    JSONObject obj = new JSONObject(response);
+                    if (!obj.getString(TAG_RESULT).equalsIgnoreCase("[]")){
+                        JSONArray array = obj.getJSONArray(TAG_RESULT);
+                        for (int i = 0; i < array.length(); i++) {
+                            JSONObject object = array.getJSONObject(i);
+                            tvJMasalah.setText(object.getString("jml_masalah"));
+                            tvJSelesai.setText(object.getString("jml_selesai"));
+//                            KomponenModel km = new KomponenModel(
+//                                    object.getString(JRES_IDKOMPONEN),
+//                                    object.getString(JRES_NAMA),
+//                                    object.getString(JRES_JUMLAH),
+//                                    object.getString(JRES_IDMESIN)
+//                            );
+                        }
+                    }else {
+                        Toast.makeText(getApplicationContext(), "Data Kosong!", Toast.LENGTH_LONG).show();
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Toast.makeText(getApplicationContext(), error.getMessage(), Toast.LENGTH_LONG).show();
+                    }
+                }
+        );
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        requestQueue.add(stringRequest);
     }
 
     @Override

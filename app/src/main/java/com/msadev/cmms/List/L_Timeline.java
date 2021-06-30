@@ -136,9 +136,9 @@ public class L_Timeline extends AppCompatActivity implements ListView.OnScrollLi
                                     object.getString(JRES_SHIFT),
                                     object.getString(JRES_IDMASALAH),
                                     object.getString(JRES_IDPENGGUNA),
-                                    object.getString(JRES_JAM),
+//                                    object.getString(JRES_JAM),
                                     object.getString(JRES_MASALAH),
-                                    object.getString(JRES_IDMESIN),
+//                                    object.getString(JRES_IDMESIN),
                                     object.getString(JRES_NOMESIN),
                                     object.getString(JRES_SITE)
                             );

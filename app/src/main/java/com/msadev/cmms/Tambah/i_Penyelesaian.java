@@ -101,7 +101,7 @@ public class i_Penyelesaian extends AppCompatActivity implements View.OnClickLis
         btnSimpan.setOnClickListener(this);
 
         //DATE PICKER
-        SimpleDateFormat formatTanggal = new SimpleDateFormat("dd-MM-yyyy");
+        SimpleDateFormat formatTanggal = new SimpleDateFormat("yyyy-MM-dd");
         Date Tanggal = new Date();
         etTanggal.setText(formatTanggal.format(Tanggal));
 
@@ -112,7 +112,7 @@ public class i_Penyelesaian extends AppCompatActivity implements View.OnClickLis
                 kalender.set(Calendar.YEAR, year);
                 kalender.set(Calendar.MONTH, month);
                 kalender.set(Calendar.DAY_OF_MONTH, dayOfMonth);
-                String FormatTanggal = "dd-MM-yyy";
+                String FormatTanggal = "yyyy-MM-dd";
                 SimpleDateFormat sdf = new SimpleDateFormat(FormatTanggal, Locale.US);
                 etTanggal.setText(sdf.format(kalender.getTime()));
             }
@@ -175,7 +175,7 @@ public class i_Penyelesaian extends AppCompatActivity implements View.OnClickLis
                             checkoutModelList.add(cm);
                         }
                     }else {
-                        Toast.makeText(getApplicationContext(), "Oops, Data Mesin masih kosong!", Toast.LENGTH_LONG).show();
+//                        Toast.makeText(getApplicationContext(), "Oops, Data Mesin masih kosong!", Toast.LENGTH_LONG).show();
                     }
                     adapter = new CheckoutAdapter(checkoutModelList, getApplicationContext());
                     listView.setAdapter(adapter);

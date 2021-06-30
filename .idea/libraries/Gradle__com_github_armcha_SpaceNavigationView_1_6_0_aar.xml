@@ -1,8 +1,15 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.armcha:SpaceNavigationView:1.6.0@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a7359c25ef08147228be0570ee52849f/jetified-SpaceNavigationView-1.6.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a7359c25ef08147228be0570ee52849f/jetified-SpaceNavigationView-1.6.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/32a22b8b9da8909c35a2c93a318d25c7/jetified-SpaceNavigationView-1.6.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/32a22b8b9da8909c35a2c93a318d25c7/jetified-SpaceNavigationView-1.6.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/32a22b8b9da8909c35a2c93a318d25c7/jetified-SpaceNavigationView-1.6.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/482cacf3d47c6b60cfcd882c6dd59761/jetified-SpaceNavigationView-1.6.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/482cacf3d47c6b60cfcd882c6dd59761/jetified-SpaceNavigationView-1.6.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/482cacf3d47c6b60cfcd882c6dd59761/jetified-SpaceNavigationView-1.6.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/06ce5ad2f728c50eb153035a47d58caf/jetified-SpaceNavigationView-1.6.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/06ce5ad2f728c50eb153035a47d58caf/jetified-SpaceNavigationView-1.6.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/06ce5ad2f728c50eb153035a47d58caf/jetified-SpaceNavigationView-1.6.0/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.armcha/SpaceNavigationView/1.6.0/f3e0325da97b14552fdd10cf50ab5b3fea567/SpaceNavigationView-1.6.0-javadoc.jar!/" />

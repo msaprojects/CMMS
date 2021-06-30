@@ -33,7 +33,7 @@ public class d_Progress extends AppCompatActivity {
         ProgressModel pm = getIntent().getParcelableExtra(DATAPROGRESS);
         tvnomesin.setText(pm.getNomesin());
         tvtanggal.setText(pm.getTanggal());
-        tvjam.setText(pm.getJam());
+//        tvjam.setText(pm.getJam());
         tvsite.setText(pm.getSite());
         tvengginer.setText(pm.getEngginer());
         tvshift.setText(pm.getShift());

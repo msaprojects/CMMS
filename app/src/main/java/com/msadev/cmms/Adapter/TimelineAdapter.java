@@ -153,7 +153,7 @@ public class TimelineAdapter extends ArrayAdapter<TimelineModel> {
             tvketbrng.setText("\t\tKeterangan : \t");
         }
         //masalah
-        tgl_masalah.setText(tm.getMasalah());
+        tgl_masalah.setText(tm.getTanggal());
         jam.setText(tm.getJam());
         masalah.setText(tm.getMasalah());
         //progress

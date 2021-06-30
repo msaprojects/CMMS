@@ -5,6 +5,7 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.widget.AbsListView;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -106,7 +107,7 @@ public class L_Timeline2 extends AppCompatActivity implements ListView.OnScrollL
     }
 
     private void loadData(){
-//        Log.d("HASIL JSON ", IPADDRESS + "/progress1/"+idmasalah);
+        Log.d("HASIL JSON ", IPADDRESS + "/progress1/"+idmasalah);
         StringRequest stringRequest = new StringRequest(Request.Method.GET, IPADDRESS + "/timeline/"+idmasalah, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {

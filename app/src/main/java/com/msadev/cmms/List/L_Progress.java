@@ -141,7 +141,7 @@ public class L_Progress extends AppCompatActivity implements ListView.OnScrollLi
     }
 
     private void loadData(){
-//        Log.d("HASIL JSON ", IPADDRESS + "/progress1/"+idmasalah);
+        Log.d("HASIL JSON ", IPADDRESS + "/progress1/"+idmasalah);
         StringRequest stringRequest = new StringRequest(Request.Method.GET, IPADDRESS + "/progress1/"+idmasalah, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -159,9 +159,8 @@ public class L_Progress extends AppCompatActivity implements ListView.OnScrollLi
                                     object.getString(JRES_SHIFT),
                                     object.getString(JRES_IDMASALAH),
                                     object.getString(JRES_IDPENGGUNA),
-                                    object.getString(JRES_JAM),
                                     object.getString(JRES_MASALAH),
-                                    object.getString(JRES_IDMESIN),
+//                                    object.getString(JRES_IDMESIN),
                                     object.getString(JRES_NOMESIN),
                                     object.getString(JRES_SITE)
                             );

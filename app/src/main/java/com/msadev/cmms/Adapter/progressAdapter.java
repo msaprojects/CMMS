@@ -42,7 +42,7 @@ public class progressAdapter extends ArrayAdapter<ProgressModel> {
         TextView perbaikan = listData.findViewById(R.id.perbaikan);
 
         tgl.setText(pm.getTanggal());
-        jam.setText(pm.getJam());
+//        jam.setText(pm.getJam());
         nomesin.setText(pm.getNomesin());
         engginer.setText(pm.getEngginer());
         masalah.setText(pm.getMasalah());

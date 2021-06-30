@@ -36,6 +36,5 @@ dependencies {
     implementation 'com.firebase:firebase-jobdispatcher:0.5.2'
     implementation 'com.github.armcha:SpaceNavigationView:1.6.0'
     implementation 'androidx.cardview:cardview:1.0.0'
-
 }
 apply plugin: 'com.google.gms.google-services'

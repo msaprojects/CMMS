@@ -6,7 +6,7 @@ import android.os.Parcelable;
 public class ProgressModel implements Parcelable {
     String idprogress, perbaikan, engginer, tanggal, shift, idmasalah, idpengguna, jam, masalah, idmesin, nomesin, site;
 
-    public ProgressModel(String idprogress, String perbaikan, String engginer, String tanggal, String shift, String idmasalah, String idpengguna, String jam, String masalah, String idmesin, String nomesin, String site) {
+    public ProgressModel(String idprogress, String perbaikan, String engginer, String tanggal, String shift, String idpengguna, String masalah, String idmesin, String nomesin, String site) {
         this.idprogress = idprogress;
         this.perbaikan = perbaikan;
         this.engginer = engginer;
@@ -14,8 +14,7 @@ public class ProgressModel implements Parcelable {
         this.shift = shift;
         this.idmasalah = idmasalah;
         this.idpengguna = idpengguna;
-        this.jam = jam;
-        this.masalah = masalah;
+//        this.masalah = masalah;
         this.idmesin = idmesin;
         this.nomesin = nomesin;
         this.site = site;
@@ -53,17 +52,17 @@ public class ProgressModel implements Parcelable {
         return idpengguna;
     }
 
-    public String getJam() {
-        return jam;
-    }
+//    public String getJam() {
+//        return jam;
+//    }
 
     public String getMasalah() {
         return masalah;
     }
 
-    public String getIdmesin() {
-        return idmesin;
-    }
+//    public String getIdmesin() {
+//        return idmesin;
+//    }
 
     public String getNomesin() {
         return nomesin;
@@ -81,9 +80,9 @@ public class ProgressModel implements Parcelable {
         shift = in.readString();
         idmasalah = in.readString();
         idpengguna = in.readString();
-        jam = in.readString();
+//        jam = in.readString();
         masalah = in.readString();
-        idmesin = in.readString();
+//        idmesin = in.readString();
         nomesin = in.readString();
         site = in.readString();
     }
@@ -97,9 +96,9 @@ public class ProgressModel implements Parcelable {
         dest.writeString(shift);
         dest.writeString(idmasalah);
         dest.writeString(idpengguna);
-        dest.writeString(jam);
+//        dest.writeString(jam);
         dest.writeString(masalah);
-        dest.writeString(idmesin);
+//        dest.writeString(idmesin);
         dest.writeString(nomesin);
         dest.writeString(site);
     }
