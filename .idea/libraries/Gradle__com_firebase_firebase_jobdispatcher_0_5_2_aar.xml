@@ -4,6 +4,7 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2cf34a707db69289c60bc6dca14edc06/jetified-firebase-jobdispatcher-0.5.2/annotations.zip!/" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3ff39827f6ba6d27f8958cdd1377fec4/jetified-firebase-jobdispatcher-0.5.2/annotations.zip!/" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4673c60b4a2afb8a010bc96478546fc8/jetified-firebase-jobdispatcher-0.5.2/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4071f15503597ba29950b2ad3f9cb4db/jetified-firebase-jobdispatcher-0.5.2/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2cf34a707db69289c60bc6dca14edc06/jetified-firebase-jobdispatcher-0.5.2/AndroidManifest.xml" />
@@ -16,6 +17,10 @@
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4673c60b4a2afb8a010bc96478546fc8/jetified-firebase-jobdispatcher-0.5.2/AndroidManifest.xml" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4673c60b4a2afb8a010bc96478546fc8/jetified-firebase-jobdispatcher-0.5.2/res" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4673c60b4a2afb8a010bc96478546fc8/jetified-firebase-jobdispatcher-0.5.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f6fd78d2fbdac5976cb77d6c553c6387/jetified-firebase-jobdispatcher-0.5.2/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4071f15503597ba29950b2ad3f9cb4db/jetified-firebase-jobdispatcher-0.5.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4071f15503597ba29950b2ad3f9cb4db/jetified-firebase-jobdispatcher-0.5.2/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4071f15503597ba29950b2ad3f9cb4db/jetified-firebase-jobdispatcher-0.5.2/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.firebase/firebase-jobdispatcher/0.5.2/b2d1d152a915de93c236731309b9b978230236a8/firebase-jobdispatcher-0.5.2-javadoc.jar!/" />

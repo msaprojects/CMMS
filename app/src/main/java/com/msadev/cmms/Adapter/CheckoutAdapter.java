@@ -54,12 +54,14 @@ public class CheckoutAdapter extends ArrayAdapter<CheckoutModel> {
 
         TextView kode = (TextView) listData.findViewById(R.id.tvKode);
         TextView nama = (TextView) listData.findViewById(R.id.tvBarang);
+        TextView qty = (TextView) listData.findViewById(R.id.tvQty);
         TextView satuan = (TextView) listData.findViewById(R.id.tvSatuan);
         TextView keterangan = (TextView) listData.findViewById(R.id.tvKet);
         final ImageButton hapus = (ImageButton) listData.findViewById(R.id.btnHapus);
 
         kode.setText(cm.getKode());
         nama.setText(cm.getBarang());
+        qty.setText(cm.getQty());
         satuan.setText(cm.getSatuan());
         keterangan.setText(cm.getKeterangan());
         hapus.setOnClickListener(new View.OnClickListener() {
