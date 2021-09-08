@@ -63,6 +63,7 @@
             android:name=".List.L_Masalah"
             android:screenOrientation="fullSensor" />
         <activity
+            android:exported="true"
             android:name=".MainActivity"
             android:screenOrientation="fullSensor">
             <intent-filter>
@@ -71,12 +72,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <service android:name=".Service.MyFirebaseMessagingServiceold">
+        <service
+            android:exported="true"
+            android:name=".Service.MyFirebaseMessagingServiceold">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
-        <service android:name=".Service.MyJobService">
+        <service
+            android:exported="true"
+            android:name=".Service.MyJobService">
             <intent-filter>
                 <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE" />
             </intent-filter>

@@ -29,8 +29,6 @@ import com.android.volley.toolbox.Volley;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.firebase.iid.FirebaseInstanceId;
-import com.google.firebase.iid.InstanceIdResult;
 import com.msadev.cmms.Adapter.MasalahAdapter;
 import com.msadev.cmms.Adapter.MesinAdapter;
 import com.msadev.cmms.MainActivity;

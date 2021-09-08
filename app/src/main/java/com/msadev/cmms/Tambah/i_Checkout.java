@@ -23,6 +23,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.msadev.cmms.Edit.e_Permasalahan;
 import com.msadev.cmms.List.L_Masalah;
 import com.msadev.cmms.Model.BarangModel;
 import com.msadev.cmms.Model.MasalahModel;
@@ -105,7 +106,7 @@ public class i_Checkout extends AppCompatActivity implements View.OnClickListene
         etTanggal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                new DatePickerDialog(getApplicationContext(), tanggal,
+                new DatePickerDialog(i_Checkout.this, tanggal,
                         kalender.get(Calendar.YEAR),
                         kalender.get(Calendar.MONTH),
                         kalender.get(Calendar.DAY_OF_MONTH)).show();

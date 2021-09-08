@@ -120,7 +120,7 @@ public class i_Penyelesaian extends AppCompatActivity implements View.OnClickLis
         etTanggal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                new DatePickerDialog(getApplicationContext(), tanggal,
+                new DatePickerDialog(i_Penyelesaian.this, tanggal,
                         kalender.get(Calendar.YEAR),
                         kalender.get(Calendar.MONTH),
                         kalender.get(Calendar.DAY_OF_MONTH)).show();
